@@ -4,6 +4,22 @@ All notable changes to the `rasittaflan` GitHub profile repository will be docum
 
 ---
 
+## [4.0.0] - 2026-11-05
+
+### Security & Confidentiality / Gizlilik ve Güvenlik
+- TR: Vestel Ar-Ge stajına ait şirket gizliliği güvenceye alındı; şirket içi test laboratuvarları, özel ürün mimarileri, şirket içi devre şemaları ve ürünlerle ilişkilendirilebilecek belirli topoloji incelemeleri profilden tamamen temizlendi. Vestel deneyimi tarafsız ve standart 3-4 cümlelik kamusal Ar-Ge staj tanımıyla sınırlandırıldı.
+- EN: Enforced strict Vestel R&D corporate confidentiality; eliminated internal laboratory test descriptions, specific product architectures, internal schematics, and converter topologies linked to corporate products. Limited corporate internship entry to a standardized, objective 3-sentence public scope.
+- TR: Açık kaynaklı kişisel ve akademik projeler (Power Electronics Design Suite, Bodrum Gulet EMS, Elektromanyetik Levitasyon) ile kurumsal staj deneyimi açık bir ayrım notu ile birbirinden izole edildi; hiçbir projenin şirkete ait bir yazılım veya donanım olmadığı açıkça belirtildi.
+- EN: Strictly segregated independent personal/academic open-source engineering projects (Power Electronics Design Suite, Bodrum Gulet EMS, Electromagnetic Levitation) from corporate internship work with explicit disclaimers.
+
+### Changed / Değiştirilenler
+- TR: Profil mimarisi kullanıcı direktifine uygun olarak 8 adımlı mantıksal mühendislik akışına (Minimal Teknik Banner -> Kişisel Tanıtım -> Öne Çıkan Projeler -> Araştırma ve Deneyim -> Teknik Beceriler -> Eğitim -> İletişim -> Türkçe Profil) göre yeniden düzenlendi.
+- EN: Restructured profile architecture into an 8-stage logical engineering progression (Technical Banner -> Personal Intro -> Featured Projects -> Research & Experience -> Technical Skills -> Education -> Contact -> Language Switcher).
+- TR: Gösterişli unvanlar yerine 4. sınıf lisans öğrencisi ve Ar-Ge mühendisi adayı kimliği temel alındı; beklenen mezuniyet yılı 2027 olarak korundu.
+- EN: Re-anchored professional identity strictly to 4th-year undergraduate engineering student and R&D candidate (*Expected Graduation: 2027*), avoiding unverified senior titles.
+
+---
+
 ## [3.0.0] - 2026-11-05
 
 ### Fixed / Düzeltilenler
@@ -37,19 +53,3 @@ All notable changes to the `rasittaflan` GitHub profile repository will be docum
 ### Added / Eklenenler
 - TR: Sayfa başına tek tıkla doğrudan öne çıkan projelere atlayan dikkat çekici "Projelerime Doğrudan Geçiş" hızlı menüsü ve her bir projeye ait özel çapa rozetleri eklendi.
 - EN: Added prominent "Quick Project Jump" navigation bar at the top of the profile, linking directly to Featured Projects and each flagship engineering suite.
-
----
-
-## [1.1.0] - 2026-11-05
-
-### Added / Eklenenler
-- TR: Tam kapsamlı, bağımsız Türkçe portföy sayfası (`README_TR.md`) oluşturuldu ve dil geçiş rozetleri eklendi.
-- EN: Created standalone full-length Turkish engineering portfolio (`README_TR.md`) with explicit language switcher badges.
-
----
-
-## [1.0.0] - 2026-11-05
-
-### Added / Eklenenler
-- TR: Profesyonel mühendislik portföyü GitHub profil README.md dosyası oluşturuldu.
-- EN: Initialized professional engineering portfolio GitHub profile README.md.

@@ -10,105 +10,107 @@
 
 <br/>
 
-**[About](#1-professional-overview)** &nbsp;|&nbsp; **[Featured Projects](#2-featured-engineering-projects)** &nbsp;|&nbsp; **[Experience](#3-research--engineering-experience)** &nbsp;|&nbsp; **[Technical Competencies](#4-technical-competencies)** &nbsp;|&nbsp; **[Türkçe Profil (README_TR.md)](README_TR.md)**
+**[About](#1-personal-introduction)** &nbsp;|&nbsp; **[Featured Projects](#2-featured-engineering-projects)** &nbsp;|&nbsp; **[Research & Experience](#3-research--engineering-experience)** &nbsp;|&nbsp; **[Technical Skills](#4-technical-competencies)** &nbsp;|&nbsp; **[Education](#5-education--academic-background)** &nbsp;|&nbsp; **[Contact](#6-contact--professional-links)** &nbsp;|&nbsp; **[🇹🇷 Türkçe Profil (README_TR.md)](README_TR.md)**
 
 </div>
 
 ---
 
-<a id="about-me"></a>
+<a id="1-personal-introduction"></a>
 
-## 1. Professional Overview
+## 1. Personal Introduction
 
 I am a 4th-year **Electrical & Electronics Engineering student** at **Karadeniz Technical University (KTU)** (*Expected Graduation: 2027*).
 
-My engineering work focuses on solving physical engineering challenges through the integration of **numerical multiphysics modeling**, **power converter topologies**, and **embedded closed-loop control**. Rather than abstract software development, my research and technical projects center on:
+My engineering studies center on the intersection of **power electronics**, **electromagnetic multiphysics modeling**, and **embedded closed-loop control systems**. My technical background spans:
 
-* **Power Electronics & Conversion:** Switch-mode DC-DC converters (Buck, Boost, LLC Resonant, Phase-Shifted Full-Bridge ZVS, Vienna PFC), magnetics design, and semiconductor thermal/stress analysis.
-* **Electromagnetic Simulation & FEA:** 2D and 3D magnetostatic finite element analysis using Ansys Maxwell and FEMM, focusing on air-gap magnetic flux density, B-H core saturation, and force generation.
-* **Control Systems & Dynamics:** Non-linear plant modeling, discrete-time feedback control, and PID + Anti-Windup algorithms in MATLAB/Simulink.
-* **Embedded Hardware & Firmware:** Bare-metal C development on ARM Cortex-M microcontrollers (**Nuvoton M032KG** and **STM32**), hardware timer PWM, ADC acquisition, and UART/CAN telemetry.
+* **Power Electronics & Conversion:** Switch-mode DC-DC converter topologies, magnetics sizing, inductor/capacitor ripple analysis, and semiconductor operating stress calculation.
+* **Electromagnetics & Numerical Simulation:** 2D magnetostatic finite element analysis (FEA) using Ansys Maxwell and FEMM, focusing on air-gap magnetic flux density, B-H core saturation, and force generation.
+* **Control Systems & Plant Dynamics:** Non-linear plant modeling, discrete-time feedback control, and PID + Anti-Windup algorithms in MATLAB/Simulink.
+* **Embedded Hardware & Firmware:** Bare-metal C development on ARM Cortex-M microcontrollers (**Nuvoton M032KG** and **STM32**), hardware timer PWM generation, multi-channel ADC sampling, and UART/CAN telemetry.
+
+> [!NOTE]
+> **Academic & Open-Source Integrity:** All open-source projects hosted on this profile are independent personal and academic research efforts. They are developed without proprietary corporate tools, internal design files, or commercial IP, and are completely separated from corporate employment.
 
 ---
 
-<a id="featured-engineering-projects"></a>
+<a id="2-featured-engineering-projects"></a>
 
 ## 2. Featured Engineering Projects
 
-All projects below include accessible repositories, simulation models, and verifiable analytical formulations.
+All featured projects below include verifiable calculation engines, reproducible simulation models, and accessible documentation.
 
 ---
 
-### Project 1: Electromagnetic Levitation (Maglev) FEA & System Dynamics Suite
+### Project 1: Electromagnetic Levitation FEA & Closed-Loop Control
 > **TÜBİTAK 2209-B Industry-Oriented Undergraduate Research Project**  
 > *Karadeniz Technical University — Department of Electrical & Electronics Engineering*
 
-* **Engineering Problem:** Contactless electromagnetic suspension for high-speed ground transport (Hyperloop) and industrial positioning is open-loop unstable according to Earnshaw's Theorem. Lifting force is non-linear and inversely proportional to the square of the air gap ($F \propto 1/g^2$), requiring coupled magnetic and dynamic control modeling.
-* **Technical Approach:** Combined numerical finite element analysis (FEA) in **Ansys Maxwell 2D Axisymmetric** with closed-loop feedback control synthesis in **MATLAB/Simulink**.
+* **Engineering Problem:** Contactless electromagnetic suspension (EMS) for high-speed ground transit (Hyperloop) and industrial positioning is inherently open-loop unstable according to Earnshaw's Theorem. Lifting force is non-linear and inversely proportional to the square of the air gap ($F \propto 1/g^2$), requiring coupled electromagnetic field and dynamic control synthesis.
+* **Technical Approach:** Combined numerical finite element analysis (FEA) in **Ansys Maxwell 2D Axisymmetric** with closed-loop dynamic feedback control in **MATLAB/Simulink**.
 * **Implementation:**
   * Modeled a cylindrical electromagnet with a Steel 1008 core ($r = 5\text{ mm}, L = 30\text{ mm}$) and a 500-turn copper coil ($d = 0.7\text{ mm}$).
-  * Configured adaptive meshing with a 1.0% target error criterion in Ansys Maxwell Magnetostatic solver.
-  * Formulated non-linear plant dynamics in MATLAB/Simulink; designed a discrete-time PID + Anti-Windup position regulator with simulated thermal limits.
-* **Results & Validation Status:**
-  * *FEA Simulation Result (V1 Actuator):* Ansys Maxwell 2D magnetostatic analysis calculated a static lifting force of **$F_z = 22.26\text{ mN}$ at $1.0\text{ A}$** and **$F_z \approx 0.482\text{ N}$ at $4.8\text{ A}$** across a **$5.0\text{ mm}$ air gap**.
-  * *Dynamic Simulation Status:* Closed-loop stability and disturbance rejection verified via 300-second non-linear Simulink simulations.
+  * Configured adaptive mesh refinement with a 1.0% target error criterion in Ansys Maxwell Magnetostatic solver.
+  * Formulated non-linear plant equations in MATLAB/Simulink; designed a discrete-time PID + Anti-Windup position regulator with simulated current and thermal saturation limits.
+* **Results & Verification:**
+  * *FEA Numerical Output (V1 Actuator):* Ansys Maxwell 2D magnetostatic analysis calculated a static lifting force of **$F_z = 22.26\text{ mN}$ at $1.0\text{ A}$** and **$F_z \approx 0.482\text{ N}$ at $4.8\text{ A}$** across a **$5.0\text{ mm}$ air gap**.
+  * *Dynamic Simulation Status:* Closed-loop stabilization and step-disturbance rejection verified across 300-second non-linear Simulink simulations.
   * *Design Target:* Multi-actuator distributed pod suspension target set at $\ge 130\text{ N}$ for V2 development.
 * 📂 **Repository:** [`rasittaflan/Electromagnetic-Levitation-FEA-Simulations`](https://github.com/rasittaflan/Electromagnetic-Levitation-FEA-Simulations)
-* 🚀 **Interactive Demo:** [Launch 3D WebGL Maglev Digital Twin](https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/) | [Live Force Calculator](https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/Maglev_Canli_Hesaplayici.html)
+* 🚀 **Interactive Demo:** [3D WebGL Digital Twin](https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/) | [Live Force Calculator](https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/Maglev_Canli_Hesaplayici.html)
 
 ---
 
-### Project 2: Power Electronics — 16 SMPS Topologies Design & Live Formula Suite
-> **Engineering Calculation Engine based on Texas Instruments Standards (SLYU036A & SLYW038B)**
+### Project 2: Power Electronics Design Suite — 16 SMPS Topologies
+> **Independent Open-Source Engineering Calculation & Educational Engine**  
+> *Formulated from Texas Instruments Standard Literature (SLYU036A & SLYW038B)*
 
-* **Engineering Problem:** Evaluating switch-mode DC-DC converters across diverse voltage ratios requires comparing 16 isolated and non-isolated topologies under continuous/discontinuous conduction mode (CCM/DCM), semiconductor stress, and duty cycle boundaries.
-* **Technical Approach:** Created an interactive engineering design suite that provides cross-verification between mathematical spreadsheet workbooks (`.xlsx` & `.ods`) and zero-dependency browser-based analytical calculation engines.
+* **Engineering Problem:** Systematic design and comparative evaluation of switch-mode DC-DC converters across varying voltage ratios requires evaluating continuous/discontinuous conduction modes (CCM/DCM), duty cycle boundaries, semiconductor peak stress, and component sizing across 16 isolated and non-isolated topologies.
+* **Technical Approach:** Developed an independent analytical calculation suite cross-verifying mathematical spreadsheet workbooks (`.xlsx` & `.ods`) with an interactive, zero-dependency browser-based analytical engine.
 * **Implementation:**
-  * Analyzed 16 topologies: Buck, Boost, Inverting Buck-Boost, SEPIC, Ćuk, Zeta, Flyback, Two-Switch Flyback, Active Clamp Forward, Single-Switch Forward, Two-Switch Forward, Push-Pull, Weinberg, Half-Bridge, Full-Bridge, and Phase-Shifted Full-Bridge (PSFB - ZVS).
-  * Formulated a calculation pipeline mapping 14 user design input parameters to 25 continuous output variables per converter.
-* **Results & Validation Status:**
-  * *Analytical Parity:* Formulated and cross-verified **400 active engineering equations** with 1:1 parity between Excel/Calc models and the JavaScript calculation engine.
-  * *Model-Based Calculations:* Accurately computes inductor ripple current ($\Delta I_L$), capacitor ripple voltage ($\Delta V_{out}$), semiconductor peak stress, and Zero-Voltage Switching (ZVS) transition conditions.
+  * Covers 16 topologies: Buck, Boost, Inverting Buck-Boost, SEPIC, Ćuk, Zeta, Flyback, Two-Switch Flyback, Active Clamp Forward, Single-Switch Forward, Two-Switch Forward, Push-Pull, Weinberg, Half-Bridge, Full-Bridge, and Phase-Shifted Full-Bridge (PSFB - ZVS).
+  * Formulated an analytical pipeline linking 14 user design inputs to 25 continuous output variables per converter topology.
+* **Results & Verification:**
+  * *Analytical Consistency:* Implemented **400 active engineering equations** with 1:1 numerical parity between spreadsheet workbooks and the web engine.
+  * *Physics-Based Derivations:* Formulates inductor current ripple ($\Delta I_L$), output voltage ripple ($\Delta V_{out}$), semiconductor peak reverse voltage/current stress, and Zero-Voltage Switching (ZVS) transition criteria.
+  * *Independence:* Strictly an independent educational and research project; contains no corporate IP, proprietary test data, or commercial circuitry.
 * 📂 **Repository:** [`rasittaflan/Power_Electronics`](https://github.com/rasittaflan/Power_Electronics)
-* 🚀 **Interactive Demo:** [Launch Live SMPS Calculator](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Canli_Hesaplayici.html) | [LaTeX / MathML Reference Table](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html)
+* 🚀 **Interactive Demo:** [Live SMPS Calculator](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Canli_Hesaplayici.html) | [Interactive Formula Reference Table](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html)
 
 ---
 
-### Project 3: Bodrum Gulet Hybrid EMS — Renewable Power & Naval Stability Optimization
+### Project 3: Bodrum Gulet Hybrid EMS Simulator
 > **KTÜ MHN 4001 Interdisciplinary Engineering Capstone Project**  
-> *Authors: Muhammet Raşit Taflan & Muhammed Emin Kadirov*
+> *Co-Authors: Muhammet Raşit Taflan & Muhammed Emin Kadirov*
 
-* **Engineering Problem:** Traditional wooden charter gulets (20–35 m) continuously run auxiliary diesel alternator sets 24 hours/day to sustain hotel electrical loads while anchored, causing fuel waste, acoustic noise, and coastal marine emissions.
-* **Technical Approach:** Modeled and simulated a marine microgrid coupling solar PV, LiFePO4 battery storage, and auxiliary diesel generation, governed by a rule-based discrete Energy Management System (EMS) while evaluating naval transverse intact stability.
+* **Engineering Problem:** Traditional wooden charter gulets (20–35 m) continuously run auxiliary diesel alternator sets 24 hours/day while anchored to sustain hotel electrical loads, resulting in excess fuel consumption, acoustic emissions, and localized environmental impact.
+* **Technical Approach:** Modeled and simulated a marine microgrid combining photovoltaic generation, LiFePO4 battery energy storage, and auxiliary diesel generation, governed by a rule-based discrete Energy Management System (EMS) while evaluating naval transverse intact stability.
 * **Implementation:**
-  * Implemented a discrete-time Finite State Machine (FSM) enforcing Kirchhoff power balance across a 48 VDC bus ($\Delta t = 5\text{ min}$, balance tolerance $|P_{balance}| < 10^{-9}\text{ kW}$).
-  * Coupled astronomical solar trajectory modeling for Bodrum coordinates ($37.034^\circ\text{ N}, 27.430^\circ\text{ E}$) to compare **Model A (8.0 kWp Fixed Bimini)** vs. **Model B (13.6 kWp Retractable Solar Wings)** under wind-speed safety constraints.
-* **Results & Validation Status:**
+  * Built a discrete-time Finite State Machine (FSM) enforcing strict Kirchhoff power balance across a 48 VDC bus ($\Delta t = 5\text{ min}$, balance residual $|P_{\mathrm{balance}}| < 10^{-9}\text{ kW}$).
+  * Integrated astronomical solar trajectory modeling for Bodrum coordinates ($37.034^\circ\text{ N}, 27.430^\circ\text{ E}$) to evaluate **Model A (8.0 kWp Fixed Bimini)** vs. **Model B (13.6 kWp Retractable Solar Wings)** under wind-speed aerodynamic safety limits.
+* **Results & Verification:**
   * *Simulation Estimate:* Daily diesel fuel consumption reduced by **71.6%** (from $88.42\text{ L/day}$ baseline to $25.10\text{ L/day}$ in Model B).
-  * *Operational Estimate:* Daily auxiliary generator runtime reduced from 24.0 h to 6.4 h, enabling **17.6 hours of continuous silent operation** daily.
-  * *Analytical Projection:* Estimated **20.36 tons of seasonal $\mathrm{CO}_2$ avoided** over a 120-day charter season.
-  * *Preliminary Hydrostatics:* Calculated transverse metacentric height ($GM = 1.021\text{ m}$, $\Delta KG = +9.4\text{ mm}$), confirming form stability.
+  * *Operational Estimate:* Auxiliary generator runtime reduced from 24.0 h to 6.4 h, enabling **17.6 hours of continuous silent operation** daily.
+  * *Environmental Projection:* Estimated **20.36 tons of seasonal $\mathrm{CO}_2$ avoided** over a 120-day charter season.
+  * *Preliminary Hydrostatics:* Calculated transverse metacentric height ($GM = 1.021\text{ m}$, $\Delta KG = +9.4\text{ mm}$), confirming compliance with basic intact form stability criteria.
 * 📂 **Repository:** [`rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator`](https://github.com/rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator)
-* 🚀 **Interactive Demo:** [Launch 3D WebGL Marine EMS Simulator](https://rasittaflan.github.io/Bodrum-Gulet-Hybrid-EMS-Simulator/)
+* 🚀 **Interactive Demo:** [3D WebGL Marine EMS Simulator](https://rasittaflan.github.io/Bodrum-Gulet-Hybrid-EMS-Simulator/)
 
 ---
 
-<a id="experience"></a>
+<a id="3-research--engineering-experience"></a>
 
 ## 3. Research & Engineering Experience
 
-### ⚡ Vestel R&D — Hardware Design Engineering Intern
-**Electric Vehicle Charging Systems** • *Summer 2026 (6-Week Hardware R&D Internship)*  
-* Investigated power converter topologies for EV charging stations, focusing on isolated DC-DC stages including **LLC Resonant Converters** and Zero-Voltage Switching (ZVS) **Phase-Shifted Full-Bridge (PSFB)**.
-* Evaluated three-phase **Vienna PFC** rectifiers and **interleaved boost** stages for power factor correction and harmonic mitigation.
-* Participated in semiconductor loss calculations, capacitor ripple budgeting, thermal validation, and CAN bus telemetry diagnostics in high-power test laboratories.
+### 🏢 Vestel R&D | Hardware Design Intern — Summer 2026
+Completed a six-week internship in hardware R&D related to electric vehicle charging systems. Gained experience with general power electronics concepts, converter topologies, engineering verification practices, and collaborative R&D workflows.
 
 ---
 
 ### 🧲 TÜBİTAK 2209-B — Undergraduate Research Project
-**Electromagnetic Levitation & Control** • *Karadeniz Technical University*  
+**Electromagnetic Levitation & Control** • *Karadeniz Technical University (KTU)*  
 * *Project Title:* "Design of PID Controlled Electromagnetic Levitation System and Its Integration into Hyperloop Applications".
-* Conducted 2D magnetostatic finite element analysis, air-gap flux calculations, and coil thermal dissipation modeling.
+* Conducted 2D magnetostatic finite element analysis, air-gap flux density calculations, and coil thermal dissipation modeling.
 * Synthesized discrete-time closed-loop feedback algorithms coupling Maxwell FEA data with Simulink dynamic plant models.
 
 ---
@@ -123,28 +125,28 @@ All projects below include accessible repositories, simulation models, and verif
 
 ### 🚝 Hyperloop Team Engineering
 **Levitation & Dynamics Subsystems**  
-* Contributed to engineering studies on electromagnetic levitation actuators, linear induction propulsion concepts, power distribution, and dynamic stability.
+* Contributed to student engineering studies on electromagnetic levitation actuators, linear induction propulsion concepts, power distribution, and dynamic stability.
 
 ---
 
-<a id="technical-competencies"></a>
+<a id="4-technical-competencies"></a>
 
 ## 4. Technical Competencies
 
-The skills listed below represent tools, methods, and hardware used directly in research projects, laboratory testing, and engineering coursework:
+The competencies listed below reflect tools, methods, and hardware applied directly in academic research, student team engineering, laboratory testing, and engineering coursework:
 
 | Competency Domain | Core Tools & Frameworks | Practical Engineering Application |
 | :--- | :--- | :--- |
-| **Power Electronics** | DC-DC Converters, LLC Resonant, PSFB (ZVS), Vienna PFC, Buck/Boost Topologies | Converter design, magnetic core/inductor calculations, semiconductor stress and thermal loss analysis. |
-| **Control & Simulation** | MATLAB, Simulink, Simscape, State-Space, Classical Control | Non-linear dynamic plant modeling, discrete-time PID + Anti-Windup control, stability verification. |
+| **Power Electronics** | DC-DC Converters, LLC Resonant, PSFB (ZVS), Vienna PFC, Buck/Boost Topologies | Converter analytical design, magnetic core/inductor calculations, semiconductor stress and thermal loss analysis. |
+| **Control & Simulation** | MATLAB, Simulink, Simscape, State-Space, Classical Control | Non-linear dynamic plant modeling, discrete-time PID + Anti-Windup control, closed-loop stability verification. |
 | **Electromagnetics & FEA** | Ansys Maxwell 2D, FEMM 4.2 | 2D magnetostatic field analysis, B-H core saturation modeling, coil inductance calculation, air-gap force mapping. |
 | **Embedded Systems** | **Nuvoton M032KG** (ARM Cortex-M0), **STM32** (ARM Cortex-M), C, GCC, VS Code, Nu-Link, STM32CubeIDE | Bare-metal firmware development, hardware timer PWM generation, multi-channel ADC acquisition, UART communication, CAN bus. |
 | **Engineering Software** | Python (NumPy / SciPy), JavaScript, HTML5 / MathML, LaTeX, Git, GitHub | Discrete numerical modeling, interactive calculation engines, version control, technical documentation. |
-| **Laboratory Instrumentation** | Digital Storage Oscilloscopes, Power Analyzers, Electronic Loads, LCR Meters | Power stage waveform debugging, current ripple measurement, thermal testing, bench validation. |
+| **Laboratory Instrumentation** | Digital Storage Oscilloscopes, Power Analyzers, Electronic Loads, LCR Meters | Power stage waveform debugging, current ripple measurement, thermal verification, bench validation. |
 
 ---
 
-<a id="education"></a>
+<a id="5-education--academic-background"></a>
 
 ## 5. Education & Academic Background
 
@@ -155,25 +157,9 @@ The skills listed below represent tools, methods, and hardware used directly in 
 
 ---
 
-<a id="turkce-profil"></a>
+<a id="6-contact--professional-links"></a>
 
-## 6. 🇹🇷 Türkçe Profil Özeti
-
-> [!NOTE]
-> Tam kapsamlı, bağımsız Türkçe portföy dokümanı için [**👉 README_TR.md**](README_TR.md) dosyasını inceleyebilirsiniz.
-
-**Muhammet Raşit Taflan**, Karadeniz Teknik Üniversitesi (KTÜ) Elektrik-Elektronik Mühendisliği 4. sınıf lisans öğrencisidir (*Beklenen Mezuniyet: 2027*).
-
-Çalışmaları yazılım geliştirmeden ziyade **güç elektroniği**, **sonlu elemanlar analizi (FEA)**, **gömülü sistemler (Nuvoton M032 / STM32)** ve **kapalı çevrim kontrol dinamikleri** alanlarında gerçek fiziksel mühendislik problemlerine yönelik tasarım, analiz, simülasyon ve Ar-Ge faaliyetlerine odaklanmaktadır.
-
-* **Öne Çıkan Çalışmalar:** TÜBİTAK 2209-B Elektromanyetik Levitasyon FEA simülasyonları ($F_z = 22.26\text{ mN}$ @ $1\text{ A}$ Ansys Maxwell 2D magnetostatik hesabı), TI standartlarında 16 SMPS Güç Elektroniği Tasarım Paketi (400 doğrulanmış denklem) ve Bodrum Guletleri için Hibrit Akıllı EMS Simülatörü (%71.6 simüle yakıt tasarrufu).
-* **Deneyimler:** Vestel Ar-Ge Donanım Tasarımı Stajı (2026 Yazı, 6 Hafta), Ege Üniversitesi Elektrikli Araç Takım Kaptanlığı (Ağustos 2023 – Eylül 2024), Hyperloop takımı alt sistem çalışmaları.
-
----
-
-<a id="contact"></a>
-
-## 7. Contact & Professional Links
+## 6. Contact & Professional Links
 
 <div align="center">
 
@@ -193,5 +179,13 @@ GitHub:   https://github.com/rasittaflan
 ---
 
 *Disciplined engineering analysis, physical simulation, and research-driven hardware design ⚡*
+
+</div>
+
+---
+
+<div align="center">
+
+**[🇹🇷 Bu profilin Türkçe versiyonu için tıklayınız (README_TR.md)](README_TR.md)**
 
 </div>
