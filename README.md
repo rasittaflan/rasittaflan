@@ -11,33 +11,56 @@
 
 <br/>
 
-### 🌐 [**🇬🇧 English Profile**](#-about-me) &nbsp;&nbsp;|&nbsp;&nbsp; [**🇹🇷 Türkçe Profil Özeti**](#-turkce-profil-ozeti)
-
----
+### 🌐 Language Selection / Dil Seçeneği
+[![English Full Profile](https://img.shields.io/badge/Language-English_Full_Portfolio-2563eb?style=for-the-badge&logo=readme&logoColor=white)](README.md)
+[![Türkçe Tam Profil](https://img.shields.io/badge/Dil-Türkçe_Tam_Portföy-00b4d8?style=for-the-badge&logo=readme&logoColor=white)](README_TR.md)
+[![Sayfa İçi Türkçe Özet](https://img.shields.io/badge/Hızlı_Atla-Sayfa_İçi_Türkçe_Özet-059669?style=for-the-badge&logo=target&logoColor=white)](#turkce-profil)
 
 </div>
 
+---
+
+<a id="about-me"></a>
+
 ## 📌 Executive Summary
 
-> **Muhammet Raşit Taflan** is a senior Electrical and Electronics Engineering undergraduate at **Karadeniz Technical University (KTU)**, specializing in **Power Electronics & Conversion**, **Electromagnetic Finite Element Analysis (FEA)**, **Embedded Systems**, and **Closed-Loop Control Dynamics**.
+> **Muhammet Raşit Taflan** is a senior Electrical & Electronics Engineering undergraduate and R&D researcher at **Karadeniz Technical University (KTU)**.
 > 
-> His engineering methodology centers on bridging rigorous numerical physics modeling (Ansys Maxwell, MATLAB/Simulink) with physical hardware implementation, laboratory testing, and embedded control.
+> His engineering domain bridges **numerical multiphysics modeling** (Ansys Maxwell 2D/3D FEA, MATLAB/Simulink) with **physical power stage hardware design**, **embedded firmware control**, and **laboratory characterization**.
+> 
+> Key technical specialties include **Switched-Mode Power Supply (SMPS) Topologies (LLC, PSFB, Vienna PFC)**, **Electromagnetic Finite Element Analysis (Maglev)**, **Closed-Loop PID Control**, and **Renewable Energy Management Systems (EMS)**.
 
 ---
 
-## 🧭 Core Engineering Pillars
+## 🧭 Multiphysics & Hardware Engineering Workflow
 
-```
-+---------------------------------------------------------------------------------------------------------+
-|                                    ENGINEERING COMPETENCY DOMAINS                                       |
-+------------------------------------+------------------------------------+-------------------------------+
-|  ⚡ Power Electronics & Conversion  |  🧲 Electromagnetic FEA & Maglev   |  🎯 Control Systems & Embedded |
-|  • SMPS Topologies (Buck/Boost/Fly)|  • Ansys Maxwell 2D/3D Magnetostatics|  • Closed-Loop PID + Anti-Windup|
-|  • LLC Resonant & PSFB (ZVS)       |  • FEMM Numerical Modeling         |  • Nonlinear Plant Dynamics   |
-|  • Vienna PFC & Interleaved Boost  |  • B-H Saturation & Flux Density   |  • STM32 (ARM Cortex-M) C/C++ |
-|  • Magnetics & Inductor Design     |  • Force vs. Air Gap Mapping       |  • CAN Bus, UART, ADC & Timers|
-|  • Thermal Loss & Stress Analysis  |  • TÜBİTAK 2209-B Maglev Research  |  • Hardware Lab Test & Bench  |
-+------------------------------------+------------------------------------+-------------------------------+
+```mermaid
+flowchart LR
+    subgraph S1["1. Physics & FEA Simulation"]
+        direction TB
+        A1["Ansys Maxwell 2D/3D & FEMM"] --> A2["B-H Saturation Analysis (B < 1.8 T)"]
+        A2 --> A3["Force vs. Air Gap (F_mag vs g vs I)"]
+    end
+
+    subgraph S2["2. Dynamic Modeling & Control"]
+        direction TB
+        B1["MATLAB / Simulink Plant"] --> B2["Closed-Loop PID + Anti-Windup"]
+        B2 --> B3["Thermal Runaway & Stability Verif."]
+    end
+
+    subgraph S3["3. Embedded Firmware & Gate Drive"]
+        direction TB
+        C1["STM32 (ARM Cortex-M) Firmware"] --> C2["High-Res Timer PWM & ADC Sense"]
+        C2 --> C3["CAN Bus Telemetry & Interlocks"]
+    end
+
+    subgraph S4["4. Power Hardware & Lab Bench"]
+        direction TB
+        D1["DC-DC Converters & Gate Drivers"] --> D2["Digital Oscilloscopes & Power Analyzers"]
+        D2 --> D3["Verified Physical Prototyping"]
+    end
+
+    S1 ==> S2 ==> S3 ==> S4
 ```
 
 ---
@@ -45,29 +68,26 @@
 ## 💼 Engineering Experience & Leadership
 
 ### ⚡ Hardware R&D Engineering Intern — Electric Vehicle Charging Systems
-**Vestel R&D** • *Summer 2026 (6-Week Intensive R&D Internship)*  
-* **Technical Focus:** Hardware architecture and power converter topology analysis for next-generation Electric Vehicle (EV) charging stations.
-* **Converter Topologies:** Investigated high-efficiency isolated DC-DC stages including **LLC Resonant Converters** and **Phase-Shifted Full-Bridge (PSFB)** with Zero-Voltage Switching (ZVS), as well as **Vienna PFC** and **interleaved boost** input stages.
-* **Laboratory & Validation:** Participated in power stage stress calculations, thermal characterization, component selection, CAN bus communication verification, and high-power laboratory instrumentation.
+**Vestel R&D** • *Summer 2026 (6-Week Intensive Hardware R&D)*  
+* **Power Conversion Topologies:** Investigated high-efficiency isolated DC-DC converter stages including **LLC Resonant Converters** and **Phase-Shifted Full-Bridge (PSFB)** with Zero-Voltage Switching (ZVS), alongside three-phase **Vienna PFC** rectifiers and **interleaved boost** power factor stages.
+* **Hardware Bench Testing:** Participated in power semiconductor loss calculations, thermal stress validation, capacitor ripple current budgeting, and CAN bus telemetry diagnostics under laboratory conditions.
 
 ---
 
-### 🏎️ Team Captain — Electric Race Vehicle Development
+### 🏎️ Team Captain — Electric Race Vehicle Engineering
 **Ege University Electric Vehicle Team** • *August 2023 – September 2024*  
-* **Leadership & Architecture:** Directed the multidisciplinary engineering team through design, integration, and track testing of an efficiency-focused electric competition vehicle.
-* **Electrical Powertrain & Low-Voltage:** Oversaw battery management system (BMS) integration, telemetry transmission, motor controller interfacing, and safety shutdown interlocks.
-* **Milestone Execution:** Coordinated subsystem leads across powertrain, aerodynamics, mechanical chassis, and telemetry, ensuring technical compliance and race readiness.
+* **Technical Direction:** Directed the multidisciplinary engineering team through full-cycle CAD design, component integration, low-voltage wiring harnesses, and track testing for energy-efficient competition electric vehicles.
+* **Electrical Powertrain & BMS:** Supervised high-voltage battery pack safety, Battery Management System (BMS) cell balancing, motor controller parameter tuning, and low-voltage emergency shutdown loops.
 
 ---
 
 ### 🚝 Hyperloop Subsystem Engineering
 **Hyperloop R&D Team** • *2024 – Present (Active)*  
-* **Subsystem Focus:** Electromagnetic levitation actuators, linear propulsion dynamics, power distribution, and dynamic stabilization.
-* **Integration:** Coupling finite element electromagnetic analysis with embedded sensors and real-time electronic drive circuitry for pod levitation stability.
+* **Subsystem Focus:** Electromagnetic levitation actuators, linear induction propulsion concepts, power distribution units, and dynamic stabilization under transitional speeds.
 
 ---
 
-## 🔬 Research & Academic Projects
+## 🔬 Research & Academic Publications
 
 ### 🧲 TÜBİTAK 2209-B — PID-Controlled Electromagnetic Levitation System for Hyperloop Applications
 > *Industry-Oriented Undergraduate Research Project Support Program (TÜBİTAK 2209-B)*  
@@ -196,39 +216,39 @@
 
 ---
 
-<a id="turkce-profil-ozeti"></a>
+<a id="turkce-profil"></a>
 
-## 🇹🇷 Türkçe Profil Özeti
+## 🇹🇷 Türkçe Mühendislik Özeti & Proje Kapsamı
 
-<details>
-<summary><b>🔍 Türkçe Mühendislik Özeti ve Proje Detaylarını Görüntülemek İçin Tıklayın</b></summary>
-<br/>
+> [!NOTE]
+> Tam kapsamlı, bağımsız Türkçe portföy sayfasına ulaşmak için [**👉 Türkçe Tam Portföy Dokümanını (README_TR.md)**](README_TR.md) inceleyebilirsiniz.
 
-### Hakkımda
-**Muhammet Raşit Taflan**, Karadeniz Teknik Üniversitesi (KTÜ) Elektrik-Elektronik Mühendisliği 4. sınıf lisans öğrencisidir. Başlıca çalışma alanları:
-* **Güç Elektroniği ve Güç Dönüşümü:** DC-DC dönüştürücü topolojileri (Buck, Boost, Flyback, Forward, Köprü topolojileri), LLC rezonans dönüştürücüler, Faz Kaydırmalı Tam Köprü (PSFB - ZVS), Vienna PFC, endüktör ve manyetik bileşen tasarımı.
-* **Sonlu Elemanlar Analizi (FEA) ve Elektromanyetik Simülasyon:** Ansys Maxwell 2D/3D ve FEMM ortamlarında manyetik akı yoğunluğu, B-H doyumu, hava aralığı ve manyetik kuvvet haritalama.
-* **Gömülü Sistemler ve Kontrol Dinamiği:** STM32 (ARM Cortex-M) mikrodenetleyiciler, C/C++ gömülü yazılım geliştirme, kapalı çevrim PID ve anti-windup denetim algoritmaları, CAN bus, UART, ADC ve PWM çevre birimleri.
-* **Yenilenebilir Enerji ve Hibrit Sistemler:** Güneş PV, batarya depolama ve jeneratör tabanlı akıllı enerji yönetim sistemleri (EMS).
+### Hakkımda & Mühendislik Yaklaşımım
+**Muhammet Raşit Taflan**, Karadeniz Teknik Üniversitesi (KTÜ) Elektrik-Elektronik Mühendisliği 4. sınıf lisans öğrencisidir. Mühendislik odağı; teorik hesaplamaları ve sonlu elemanlar analizi (FEA) simülasyonlarını, gömülü sistemler ve güç elektroniği donanımlarıyla fiziksel olarak doğrulamaktır.
+
+#### Başlıca Çalışma Alanları:
+* **Güç Elektroniği & Güç Dönüşümü:** DC-DC dönüştürücü topolojileri (Buck, Boost, Inverting Buck-Boost, SEPIC, Ćuk, Zeta, Flyback, Forward, Half-Bridge, Full-Bridge), yüksek verimli Faz Kaydırmalı Tam Köprü (**PSFB - ZVS**), **LLC Rezonans** dönüştürücüler ve üç fazlı **Vienna PFC** doğrultucular.
+* **Sonlu Elemanlar Analizi (FEA) ve Manyetik Simülasyon:** Ansys Maxwell 2D eksenel simetrik ve 3D magnetostatik analizler, FEMM modelleme, B-H eğrisi doyumu, hava aralığı manyetik akı yoğunluğu ve aktüatör kaldırma kuvveti haritalama.
+* **Gömülü Sistemler ve Kapalı Çevrim Kontrol:** STM32 (ARM Cortex-M) mimarisi üzerinde C/C++ ile bare-metal ve HAL sürücü geliştirme, zamanlayıcı tetiklemeli PWM, ADC örnekleme, kapalı çevrim **PID + Anti-Windup** konum/akım denetimi ve CAN haberleşmesi.
+* **Yenilenebilir Enerji ve Hibrit Sistemler:** Güneş PV, LiFePO4 batarya ve jeneratör hibrit sistemlerinin sonlu durum makinesi (FSM) tabanlı akıllı enerji yönetimi (EMS).
 
 ---
 
-### Mühendislik ve Ar-Ge Deneyimleri
+### Mühendislik Deneyimleri & Akademik Çalışmalar
+
 1. **Vestel Ar-Ge (2026 Yaz Stajı — Donanım Tasarımı):**
-   * Elektrikli araç şarj istasyonlarının güç katı donanım tasarımı üzerine 6 haftalık yoğun Ar-Ge stajı.
-   * LLC rezonans, PSFB, Vienna PFC, interleaved boost topolojileri, güç bileşenleri termal stres analizleri ve laboratuvar ölçümleri.
+   * Elektrikli araç şarj istasyonlarının güç dönüştürücü donanım mimarisi üzerine 6 haftalık yoğun Ar-Ge stajı.
+   * LLC rezonans, PSFB, Vienna PFC ve interleaved boost topolojilerinin yarıiletken gerilim/akım stres analizleri, termal testler ve CAN haberleşme testleri.
 2. **Ege Üniversitesi Elektrikli Araç Takımı (Ağustos 2023 – Eylül 2024 — Takım Kaptanı):**
-   * Verimlilik odaklı elektrikli yarış aracının batarya yönetim sistemi, telemetri, motor sürücü entegrasyonu ve teknik yarış regülasyonlarına uyum süreçlerinin yönetimi.
+   * Verimlilik odaklı elektrikli yarış aracının elektriksel güç aktarım mimarisi, batarya yönetim sistemi (BMS), telemetri ve yarış regülasyonlarına uyum süreçlerinin yönetimi.
 3. **Hyperloop Takım Çalışmaları (2024 – Aktif):**
-   * Elektromanyetik levitasyon, itki dinamikleri ve araç stabilite sistemleri üzerine elektronik donanım çalışmaları.
+   * Elektromanyetik levitasyon sargıları, doğrusal itki dinamikleri ve araç stabilite sistemleri üzerine elektronik donanım geliştirme.
 4. **TÜBİTAK 2209-B Üniversite-Sanayi İş Birlikli Araştırma Projesi (Proje Yürütücüsü):**
    * *"PID Kontrollü Elektromanyetik Levitasyon Sistemi Tasarımı ve Hyperloop Uygulamalarına Entegrasyonu"*.
-   * Ansys Maxwell 2D/3D magnetostatik FEA analizleri ile 5 mm hava aralığında $0.4823\text{ N}$ @ $4.8\text{ A}$ V1 aktüatör kuvvet doğrulaması ve MATLAB/Simulink kapalı çevrim PID denetleyici tasarımı.
+   * Ansys Maxwell 2D/3D analizleri ile 5 mm hava aralığında $0.4823\text{ N}$ @ $4.8\text{ A}$ V1 tekil silindirik aktüatör kuvvet doğrulaması. Dağıtık çoklu aktüatör V2 pod hedefi $\ge 130\text{ N}$. Simulink kapalı çevrim PID denetleyici tasarımı.
 5. **Disiplinlerarası Mühendislik Tasarımı (KTÜ MHN 4001):**
    * *"Bodrum Guletlerinde Yenilenebilir Enerji Destekli Hibrit Güç ve Akıllı Enerji Yönetim Sistemi Optimizasyonu"*.
-   * 48 VDC bara üzerinde anlık güç dengesini sağlayan sonlu durum makinesi (FSM) tabanlı EMS tasarımı; %71.6 yakıt tasarrufu ve günlük 17.6 saat sessiz çalışma modunun doğrulanması.
-
-</details>
+   * 48 VDC bara üzerinde Kirchhoff güç dengesini sağlayan FSM tabanlı akıllı EMS; %71.6 yakıt tasarrufu, günlük 17.6 saat sessiz seyir modu ve $GM = 1.021\text{ m}$ stabilite doğrulaması.
 
 ---
 
