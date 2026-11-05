@@ -4,6 +4,14 @@ All notable changes to the `rasittaflan` GitHub profile repository will be docum
 
 ---
 
+## [1.2.0] - 2026-11-05
+
+### Added / Eklenenler
+- TR: Sayfa başına tek tıkla doğrudan öne çıkan projelere atlayan dikkat çekici "Projelerime Doğrudan Geçiş" hızlı menüsü ve her bir projeye ait özel çapa rozetleri eklendi.
+- EN: Added prominent "Quick Project Jump" navigation bar at the top of the profile, linking directly to Featured Projects and each flagship engineering suite.
+
+---
+
 ## [1.1.0] - 2026-11-05
 
 ### Added / Eklenenler
@@ -25,9 +33,3 @@ All notable changes to the `rasittaflan` GitHub profile repository will be docum
 ### Added / Eklenenler
 - TR: Profesyonel mühendislik portföyü GitHub profil README.md dosyası oluşturuldu.
 - EN: Initialized professional engineering portfolio GitHub profile README.md.
-- TR: Güç elektroniği şematiği, PWM anahtarlama dalga formu ve manyetik nüve akısını içeren özel SVG profil banner'ı oluşturuldu.
-- EN: Created custom vector SVG profile header banner.
-- TR: Vestel Ar-Ge stajı, Ege Üniversitesi Elektrikli Araç Takım Kaptanlığı ve Hyperloop takım çalışmalarını içeren kronolojik deneyim bölümü hazırlandı.
-- EN: Added chronological engineering experience section covering Vestel R&D internship, Ege University EV Team Captaincy, and Hyperloop engineering.
-- TR: TÜBİTAK 2209-B Maglev FEA ve KTÜ MHN 4001 Bodrum Gulet Hibrit EMS araştırma projelerinin doğrulanmış teknik verileri ve canlı bağlantıları eklendi.
-- EN: Integrated verified numerical findings and live interactive simulation links for TÜBİTAK 2209-B Maglev FEA and KTÜ MHN 4001 Bodrum Gulet Hybrid EMS projects.

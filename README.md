@@ -11,6 +11,14 @@
 
 <br/>
 
+### 🚀 Quick Project Access / Projelerime Doğrudan Geçiş
+[![Jump to Featured Projects](https://img.shields.io/badge/🚀_JUMP_TO-FEATURED_PROJECTS_(PROJELERİM)-ef4444?style=for-the-badge&logo=rocket&logoColor=white)](#featured-projects)
+[![Maglev FEA Suite](https://img.shields.io/badge/🧲_Project-Maglev_FEA_Suite-0284c7?style=for-the-badge&logo=ansys&logoColor=white)](#maglev-fea)
+[![Power Electronics](https://img.shields.io/badge/⚡_Project-Power_Electronics_SMPS-f59e0b?style=for-the-badge)](#power-electronics)
+[![Bodrum Gulet EMS](https://img.shields.io/badge/☀️_Project-Marine_Hybrid_EMS-10b981?style=for-the-badge)](#marine-ems)
+
+<br/>
+
 ### 🌐 Language Selection / Dil Seçeneği
 [![English Full Profile](https://img.shields.io/badge/Language-English_Full_Portfolio-2563eb?style=for-the-badge&logo=readme&logoColor=white)](README.md)
 [![Türkçe Tam Profil](https://img.shields.io/badge/Dil-Türkçe_Tam_Portföy-00b4d8?style=for-the-badge&logo=readme&logoColor=white)](README_TR.md)
@@ -65,6 +73,8 @@ flowchart LR
 
 ---
 
+<a id="experience"></a>
+
 ## 💼 Engineering Experience & Leadership
 
 ### ⚡ Hardware R&D Engineering Intern — Electric Vehicle Charging Systems
@@ -86,6 +96,8 @@ flowchart LR
 * **Subsystem Focus:** Electromagnetic levitation actuators, linear induction propulsion concepts, power distribution units, and dynamic stabilization under transitional speeds.
 
 ---
+
+<a id="research"></a>
 
 ## 🔬 Research & Academic Publications
 
@@ -119,11 +131,15 @@ flowchart LR
 
 ---
 
+<a id="featured-projects"></a>
+<a id="projects"></a>
+
 ## 🛠️ Featured Open-Source Engineering Suites
 
 <table>
   <tr>
     <td width="33%" valign="top">
+      <a id="maglev-fea"></a>
       <h3 align="center">🧲 Maglev FEA Suite</h3>
       <p align="center">
         <a href="https://github.com/rasittaflan/Electromagnetic-Levitation-FEA-Simulations">
@@ -145,6 +161,7 @@ flowchart LR
       <p><code>Ansys Maxwell</code> <code>Simulink</code> <code>Three.js</code> <code>PID</code></p>
     </td>
     <td width="33%" valign="top">
+      <a id="power-electronics"></a>
       <h3 align="center">⚡ Power Electronics Suite</h3>
       <p align="center">
         <a href="https://github.com/rasittaflan/Power_Electronics">
@@ -166,6 +183,7 @@ flowchart LR
       <p><code>SMPS</code> <code>DC-DC Topologies</code> <code>MathML</code> <code>Calc</code></p>
     </td>
     <td width="33%" valign="top">
+      <a id="marine-ems"></a>
       <h3 align="center">☀️ Marine Hybrid EMS</h3>
       <p align="center">
         <a href="https://github.com/rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator">
@@ -189,6 +207,8 @@ flowchart LR
 </table>
 
 ---
+
+<a id="skills"></a>
 
 ## 🧰 Technical Skills & Engineering Toolchain
 

@@ -11,6 +11,14 @@
 
 <br/>
 
+### 🚀 Projelere Doğrudan Geçiş / Quick Project Access
+[![Projelerime Git](https://img.shields.io/badge/🚀_HEMEN_ATLA-ÖNE_ÇIKAN_PROJELERİM-ef4444?style=for-the-badge&logo=rocket&logoColor=white)](#projeler)
+[![Maglev FEA Paketi](https://img.shields.io/badge/🧲_Proje-Maglev_FEA_Paketi-0284c7?style=for-the-badge&logo=ansys&logoColor=white)](#maglev-proje)
+[![Güç Elektroniği SMPS](https://img.shields.io/badge/⚡_Proje-Güç_Elektroniği_SMPS-f59e0b?style=for-the-badge)](#guc-elektronigi-proje)
+[![Bodrum Gulet EMS](https://img.shields.io/badge/☀️_Proje-Marin_Hibrit_EMS-10b981?style=for-the-badge)](#gulet-ems-proje)
+
+<br/>
+
 ### 🌐 Dil Seçeneği / Language Switch
 [![Türkçe Tam Profil](https://img.shields.io/badge/Dil-Türkçe_Tam_Portföy-00b4d8?style=for-the-badge&logo=readme&logoColor=white)](README_TR.md)
 [![Switch to English](https://img.shields.io/badge/Language-English_Full_Portfolio-2563eb?style=for-the-badge&logo=readme&logoColor=white)](README.md)
@@ -18,6 +26,8 @@
 </div>
 
 ---
+
+<a id="hakkimda"></a>
 
 ## 📌 Yönetici Özeti & Mühendislik Yaklaşımı
 
@@ -62,6 +72,8 @@ flowchart LR
 
 ---
 
+<a id="deneyim"></a>
+
 ## 💼 Mühendislik ve Liderlik Deneyimleri
 
 ### ⚡ Donanım Ar-Ge Stajyeri — Elektrikli Araç Şarj Sistemleri
@@ -83,6 +95,8 @@ flowchart LR
 * **Alt Sistem Odağı:** Elektromanyetik levitasyon aktüatörleri, doğrusal indüksiyon itki konseptleri, güç dağıtım mimarisi ve kapsülün dinamik stabilizasyonu üzerine donanım geliştirme.
 
 ---
+
+<a id="arastirma"></a>
 
 ## 🔬 Araştırma ve Akademik Projeler
 
@@ -116,11 +130,15 @@ flowchart LR
 
 ---
 
+<a id="projeler"></a>
+<a id="one-cikan-projeler"></a>
+
 ## 🛠️ Öne Çıkan Açık Kaynak Mühendislik Paketleri
 
 <table>
   <tr>
     <td width="33%" valign="top">
+      <a id="maglev-proje"></a>
       <h3 align="center">🧲 Maglev FEA Paketi</h3>
       <p align="center">
         <a href="https://github.com/rasittaflan/Electromagnetic-Levitation-FEA-Simulations">
@@ -142,6 +160,7 @@ flowchart LR
       <p><code>Ansys Maxwell</code> <code>Simulink</code> <code>Three.js</code> <code>PID</code></p>
     </td>
     <td width="33%" valign="top">
+      <a id="guc-elektronigi-proje"></a>
       <h3 align="center">⚡ Güç Elektroniği Paketi</h3>
       <p align="center">
         <a href="https://github.com/rasittaflan/Power_Electronics">
@@ -163,6 +182,7 @@ flowchart LR
       <p><code>SMPS</code> <code>DC-DC Topolojileri</code> <code>MathML</code> <code>Calc</code></p>
     </td>
     <td width="33%" valign="top">
+      <a id="gulet-ems-proje"></a>
       <h3 align="center">☀️ Marin Hibrit EMS</h3>
       <p align="center">
         <a href="https://github.com/rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator">
@@ -186,6 +206,8 @@ flowchart LR
 </table>
 
 ---
+
+<a id="yetkinlikler"></a>
 
 ## 🧰 Teknik Yetkinlikler ve Mühendislik Araç Seti
 
