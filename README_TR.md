@@ -10,24 +10,24 @@
 
 <br/>
 
-**[Türkçe Portföy](#genel-tanitim)** &nbsp;|&nbsp; **[Öne Çıkan Projeler](#one-cikan-projeler)** &nbsp;|&nbsp; **[Araştırma ve Deneyim](#arastirma-ve-deneyim)** &nbsp;|&nbsp; **[Switch to English (README.md)](README.md)**
+**[Genel Bakış](#1-genel-tanitim--muhendislik-yaklasimi)** &nbsp;|&nbsp; **[Öne Çıkan Projeler](#2-one-cikan-muhendislik-projeleri)** &nbsp;|&nbsp; **[Deneyimler](#3-arastirma-ve-muhendislik-deneyimleri)** &nbsp;|&nbsp; **[Teknik Yetkinlikler](#4-teknik-yetkinlikler)** &nbsp;|&nbsp; **[Switch to English (README.md)](README.md)**
 
 </div>
 
 ---
 
-<a id="genel-tanitim"></a>
+<a id="genel-bakis"></a>
 
 ## 1. Genel Tanıtım & Mühendislik Yaklaşımı
 
-Karadeniz Teknik Üniversitesi (KTÜ) **Elektrik-Elektronik Mühendisliği 4. sınıf lisans öğrencisiyim**.
+Karadeniz Teknik Üniversitesi (KTÜ) **Elektrik-Elektronik Mühendisliği 4. sınıf lisans öğrencisiyim** (*Beklenen Mezuniyet: 2027*).
 
-Mühendislik çalışmalarım; salt yazılım geliştirmekten ziyade **sayısal çoklu fizik modellemesi**, **güç elektroniği dönüştürücü topolojileri** ve **gömülü kapalı çevrim denetim** yöntemlerini bir araya getirerek fiziksel mühendislik problemlerini çözmeye odaklanmaktadır. Başlıca çalışma alanlarım:
+Mühendislik çalışmalarım; soyut yazılım geliştirmekten ziyade **sayısal çoklu fizik modellemesi**, **güç dönüştürücü topolojileri** ve **gömülü kapalı çevrim denetim** yöntemlerini birleştirerek fiziksel mühendislik problemlerini çözmeye odaklanmaktadır:
 
-* **Güç Elektroniği ve Güç Dönüşümü:** Yüksek verimli DC-DC topolojileri (Buck, Boost, LLC Rezonans, Faz Kaydırmalı Tam Köprü PSFB - ZVS, Vienna PFC), manyetik bileşen tasarımı, yarıiletken gerilim/akım stres analizleri ve termal modelleme.
-* **Sonlu Elemanlar Analizi (FEA) ve Elektromanyetik Simülasyon:** Ansys Maxwell 2D/3D ve FEMM ortamlarında magnetostatik ve geçici rejim analizleri; B-H manyetik doyum karakteristikleri ve kuvvet-hava aralığı-akım dinamikleri.
-* **Kapalı Çevrim Kontrol Dinamiği:** Doğrusal olmayan sistem modelleme, ayrık zamanlı durum geri beslemesi ve MATLAB/Simulink ortamında PID + Anti-Windup algoritmaları.
-* **Gömülü Donanım ve Telemetri:** ARM Cortex-M (STM32) gömülü yazılım geliştirme, donanımsal zamanlayıcı tetiklemeli PWM üretimi, ADC örnekleme ve otomotiv standardında CAN bus telemetrisi.
+* **Güç Elektroniği ve Güç Dönüşümü:** Anahtarlamalı DC-DC dönüştürücüler (Buck, Boost, LLC Rezonans, Faz Kaydırmalı Tam Köprü PSFB - ZVS, Vienna PFC), manyetik bileşen tasarımı, yarıiletken gerilim/akım stres analizleri ve termal modelleme.
+* **Sonlu Elemanlar Analizi (FEA) ve Manyetik Simülasyon:** Ansys Maxwell 2D ve FEMM ortamlarında magnetostatik analizler; hava aralığı manyetik akı yoğunluğu, B-H eğrisi doyumu ve kuvvet hesaplamaları.
+* **Kontrol Sistemleri ve Dinamik:** Doğrusal olmayan sistem modelleme, ayrık zamanlı durum geri beslemesi ve MATLAB/Simulink ortamında PID + Anti-Windup algoritmaları.
+* **Gömülü Sistemler ve Donanım:** ARM Cortex-M mimarili mikrodenetleyiciler üzerinde (**Nuvoton M032KG** ve **STM32**) C ile bare-metal geliştirme, donanımsal zamanlayıcı PWM üretimi, çok kanallı ADC örnekleme ve UART/CAN telemetrisi.
 
 ---
 
@@ -35,47 +35,40 @@ Mühendislik çalışmalarım; salt yazılım geliştirmekten ziyade **sayısal 
 
 ## 2. Öne Çıkan Mühendislik Projeleri
 
-Aşağıda listelenen tüm projeler; kaynak kodları, simülasyon modelleri ve doğrulanmış analitik hesaplama tablolarıyla birlikte belgelenmiştir.
+Aşağıda listelenen tüm projeler; kaynak kodları, simülasyon modelleri ve doğrulanabilir analitik hesaplama tablolarıyla sunulmuştur.
+
+---
 
 ### Proje 1: Elektromanyetik Levitasyon (Maglev) FEA ve Sistem Dinamiği Paketi
 > **TÜBİTAK 2209-B Sanayiye Yönelik Lisans Araştırma Projeleri Destekleme Programı**  
 > *Karadeniz Teknik Üniversitesi — Elektrik-Elektronik Mühendisliği Bölümü*
 
-<div align="center">
-  <img src="./assets/fea_magnetic_flux.png" alt="Ansys Maxwell Manyetik Akı Yoğunluğu Kontur Grafiği" width="85%" />
-  <p><em>Şekil 1: Ansys Maxwell ile doğrulanmış 5.0 mm hava aralığı ve nüve üzeri magnetostatik akı yoğunluğu (B-Field) dağılımı.</em></p>
-</div>
-
-* **Problem Tanımı:** Hyperloop gibi yüksek hızlı kara taşımacılığı ve hassas endüstriyel temassız konumlandırma sistemlerinde kullanılan elektromanyetik askılama sistemleri, Earnshaw Teoremi gereği açık çevrimde kararsızdır. Kaldırma kuvveti hava aralığının karesiyle ters orantılı ($F \propto 1/g^2$) olduğundan sistem yüksek derecede doğrusal olmayan bir fiziksel davranış sergiler.
-* **Mühendislik Yaklaşımı:** **Ansys Maxwell 2D Eksenel Simetrik ve 3D** sonlu elemanlar analizi (FEA) modelleri ile **MATLAB/Simulink** kapalı çevrim dinamik kontrol tasarımını birleştiren bütünleşik bir iş akışı geliştirilmiştir.
-* **Kullanılan Araçlar ve Teknolojiler:** `Ansys Maxwell 2D/3D`, `FEMM 4.2`, `MATLAB / Simulink`, `Three.js / WebGL`, `HTML5 / JavaScript`.
-* **Teknik Gerçekleme:**
-  * Silindirik ve U-nüveli elektromıknatıslar, silisyumlu sac ve Steel 1008 malzeme doyum sınırları ($B_{sat} \approx 1.8\text{ T}$) dikkate alınarak modellenmiştir.
-  * Enerji kalıntı hatası $\%0.1$'in altına inene kadar adaptif mesh yakınsama testleri yürütülmüştür.
-  * Elde edilen 3 boyutlu arama matrisi ($F_{mag}$ vs. $g$ vs. $I$) Simulink ortamına aktarılmış; anti-windup korumalı ayrık zamanlı PID konum denetleyicisi ve termal ısınma sınırları doğrulanmıştır.
-* **Doğrulanmış Sonuçlar:**
-  * **V1 Silindirik Aktüatör ($r = 5\text{ mm}, L = 30\text{ mm}$):** $5.0\text{ mm}$ hedef çalışma hava aralığında $4.8\text{ A}$ nominal akımda **$0.4823\text{ N}$** kaldırma kuvveti nümerik olarak doğrulanmıştır ($1.0\text{ A}$'de $22.26\text{ mN}$).
-  * **V2 Dağıtık Dizi Hedefi:** Araç süspansiyon entegrasyonuna yönelik çoklu aktüatör mimarisi hedefi **$\ge 130\text{ N}$** olarak belirlenmiştir.
-  * 300 saniyelik sürekli çalışma, ısıl dayanım ve harici mekanik basamak bozucu testleri altında konum kararlılığı kanıtlanmıştır.
+* **Mühendislik Problemi:** Yüksek hızlı kara taşımacılığı (Hyperloop) ve endüstriyel temassız konumlandırmada kullanılan elektromanyetik askılama sistemleri, Earnshaw Teoremi gereği açık çevrimde kararsızdır. Kaldırma kuvveti hava aralığının karesiyle ters orantılı ($F \propto 1/g^2$) olduğundan sistem yüksek derecede doğrusal olmayan fiziksel dinamik sergiler.
+* **Teknik Yaklaşım:** **Ansys Maxwell 2D Eksenel Simetrik** magnetostatik sonlu elemanlar analizi (FEA) ile **MATLAB/Simulink** kapalı çevrim geri beslemeli denetim tasarımını birleştiren bir iş akışı uygulanmıştır.
+* **Gerçekleme:**
+  * Steel 1008 çelik nüveli ($r = 5\text{ mm}, L = 30\text{ mm}$) ve 500 tur bakır sargılı ($d = 0.7\text{ mm}$) silindirik elektromıknatıs geometrisi modellenmiştir.
+  * Ansys Maxwell magnetostatik çözücüsünde adaptif mesh adımları %1.0 hedef hata kriteriyle yürütülmüştür.
+  * Doğrusal olmayan sistem dinamikleri MATLAB/Simulink ortamında modellenmiş; ayrık zamanlı PID + Anti-Windup konum regülatörü ve ısıl sınırlar test edilmiştir.
+* **Sonuçlar ve Doğrulama Durumu:**
+  * *FEA Simülasyon Sonucu (V1 Aktüatör):* Ansys Maxwell 2D magnetostatik analizinde, **$5.0\text{ mm}$ hava aralığında** $1.0\text{ A}$ nominal akımda dikey kaldırma kuvveti **$F_z = 22.26\text{ mN}$** ($4.8\text{ A}$ akımda $F_z \approx 0.482\text{ N}$) olarak hesaplanmıştır.
+  * *Dinamik Simülasyon Durumu:* Simulink ortamında 300 saniyelik sürekli çalışma ve basamak bozucu testleri altında kapalı çevrim kararlılık simülasyonla doğrulanmıştır.
+  * *Tasarım Hedefi:* V2 geliştirme aşaması için araç süspansiyonuna yönelik çoklu aktüatör dizisinde hedef $\ge 130\text{ N}$ olarak belirlenmiştir.
 * 📂 **Depo:** [`rasittaflan/Electromagnetic-Levitation-FEA-Simulations`](https://github.com/rasittaflan/Electromagnetic-Levitation-FEA-Simulations)
 * 🚀 **Canlı Demo:** [3B WebGL Maglev Dijital İkizi](https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/) | [Canlı Kuvvet Hesaplayıcı](https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/Maglev_Canli_Hesaplayici.html)
 
 ---
 
 ### Proje 2: Güç Elektroniği — 16 SMPS Topolojisi Tasarım ve Canlı Formül Paketi
-> **Texas Instruments Standartlarına Dayalı Etkileşimli Mühendislik Hesaplama Motoru (SLYU036A & SLYW038B)**
+> **Texas Instruments Standartlarına Dayalı Mühendislik Hesaplama Motoru (SLYU036A & SLYW038B)**
 
-* **Problem Tanımı:** Endüstriyel, otomotiv ve telekomünikasyon sistemlerine yönelik DC-DC dönüştürücü tasarımlarında; yalıtımlı ve yalıtımsız topolojilerin yarıiletken gerilim/akım stresleri, görev periyodu (duty cycle) ve sürekli/kesintili iletim modları (CCM/DCM) açısından hassas biçimde karşılaştırılması gerekmektedir.
-* **Mühendislik Yaklaşımı:** Masaüstü elektronik tablo motorları (`.xlsx` ve `.ods`) ile sıfır bağımlılıklı tarayıcı tabanlı hesaplama çekirdeğini birebir eşleyen çift yönlü doğrulanmış bir mühendislik hesaplama paketi geliştirilmiştir.
-* **Kullanılan Araçlar ve Teknolojiler:** `Güç Dönüştürücü Modelleme`, `TI SLYU036A & SLYW038B`, `JavaScript (ES6)`, `HTML5 / MathML`, `Microsoft Excel`, `LibreOffice Calc`, `LaTeX`.
-* **Teknik Gerçekleme:**
-  * 16 temel SMPS DC-DC dönüştürücüsü sentezlenmiştir:
-    * *Yalıtımsız:* Buck, Boost, Inverting Buck-Boost, SEPIC, Ćuk, Zeta.
-    * *Yalıtımlı:* Flyback, Two-Switch Flyback, Active Clamp Forward, Single-Switch Forward, Two-Switch Forward, Push-Pull, Weinberg, Half-Bridge, Full-Bridge ve Phase-Shifted Full-Bridge (PSFB - ZVS).
-  * 14 kullanıcı giriş parametresini dönüştürücü başına 25 sürekli çıkış değişkenine bağlayan analitik hesaplama omurgası kurulmuştur.
-* **Doğrulanmış Sonuçlar:**
-  * **400 aktif mühendislik denklemi** formüle edilmiş; Excel/Calc modelleri ile web motoru arasında $\%100$ sayısal doğruluk sağlanmıştır.
-  * Endüktör akım dalgalanması ($\Delta I_L$), çıkış gerilim dalgalanması ($\Delta V_{out}$), tepe yarıiletken stresleri ve Sıfır Gerilimde Anahtarlama (ZVS) geçiş kriterleri tüm dönüştürücüler için hesaplanmaktadır.
+* **Mühendislik Problemi:** Farklı gerilim oranlarına sahip güç kaynaklarında 16 yalıtımlı ve yalıtımsız topolojinin yarıiletken stresleri, görev periyodu (duty cycle) ve sürekli/kesintili iletim modları (CCM/DCM) açısından karşılaştırılması ve boyutlandırılması gerekmektedir.
+* **Teknik Yaklaşım:** Elektronik tablo motorları (`.xlsx` ve `.ods`) ile sıfır bağımlılıklı tarayıcı tabanlı analitik motorları eşleyen çift yönlü doğrulanmış bir hesaplama paketi geliştirilmiştir.
+* **Gerçekleme:**
+  * 16 temel SMPS topolojisi sentezlenmiştir (Buck, Boost, Inverting Buck-Boost, SEPIC, Ćuk, Zeta, Flyback, Two-Switch Flyback, Active Clamp Forward, Single-Switch Forward, Two-Switch Forward, Push-Pull, Weinberg, Half-Bridge, Full-Bridge ve Phase-Shifted Full-Bridge PSFB - ZVS).
+  * 14 kullanıcı giriş parametresini dönüştürücü başına 25 çıkış değişkenine bağlayan analitik hesaplama omurgası kurulmuştur.
+* **Sonuçlar ve Doğrulama Durumu:**
+  * *Analitik Eşlik:* Excel/Calc modelleri ile web hesaplama motoru arasında 1:1 sayısal eşliği sağlanan **400 aktif mühendislik denklemi** formüle edilmiştir.
+  * *Model Tabanlı Hesaplamalar:* Endüktör akım dalgalanması ($\Delta I_L$), çıkış gerilim dalgalanması ($\Delta V_{out}$), tepe yarıiletken stresleri ve Sıfır Gerilimde Anahtarlama (ZVS) koşulları analitik olarak hesaplanmaktadır.
 * 📂 **Depo:** [`rasittaflan/Power_Electronics`](https://github.com/rasittaflan/Power_Electronics)
 * 🚀 **Canlı Demo:** [Canlı SMPS Hesaplayıcı Stüdyosu](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Canli_Hesaplayici.html) | [İnteraktif LaTeX Referans Tablosu](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html)
 
@@ -85,53 +78,52 @@ Aşağıda listelenen tüm projeler; kaynak kodları, simülasyon modelleri ve d
 > **KTÜ MHN 4001 Disiplinlerarası Mühendislik Tasarımı Bitirme Projesi**  
 > *Yazarlar: Muhammet Raşit Taflan & Muhammed Emin Kadirov*
 
-* **Problem Tanımı:** Geleneksel Bodrum ahşap guletlerinde (20–35 m) koyda demirleme esnasında otel elektrik yüklerini beslemek amacıyla 24 saat kesintisiz çalışan yardımcı dizel alternatörler; yüksek yakıt tüketimine, gürültüye, karbon salımına ve deniz kirliliğine neden olmaktadır.
-* **Mühendislik Yaklaşımı:** Marin güneş PV panelleri, lityum batarya depolama ve yardımcı jeneratörü bir araya getiren mikroşebeke modellenmiş; sonlu durum makinesi (FSM) tabanlı akıllı enerji yönetimi (EMS) tasarlanırken gemi enine hidrostatik stabilitesi doğrulanmıştır.
-* **Kullanılan Araçlar ve Teknolojiler:** `Ayrık Enerji Yönetim FSM`, `Güneş Konumu Astronomi Algoritması`, `LiFePO4 Modelleme`, `Gemi Hidrostatiği`, `Three.js / WebGL`, `JavaScript`.
-* **Teknik Gerçekleme:**
-  * 48 VDC dağıtım barasında anlık Kirchhoff güç dengesini sağlayan ayrık zamanlı FSM geliştirilmiştir ($\Delta t = 5\text{ dk}$, $|P_{denge}| < 10^{-9}\text{ kW}$).
-  * Bodrum koordinatları ($37.034^\circ\text{ K}, 27.430^\circ\text{ D}$) için astronomik güneş izleme modeli kurulmuş; **Model A (8.0 kWp Sabit Bimini)** ile 3500 N lineer aktüatörlü **Model B (13.6 kWp Açılır Kapanır Güneş Kanatları)** 20 knot rüzgar kilitleri altında simüle edilmiştir.
-* **Doğrulanmış Sonuçlar:**
-  * **%71.6 yakıt tasarrufu:** Günlük dizel tüketimi $88.42\text{ L/gün}$ seviyesinden $25.10\text{ L/gün}$ seviyesine indirilmiştir.
-  * **Günlük 17.6 saat sessiz seyir:** Jeneratör çalışma süresi günde 24.0 saatten 6.4 saate düşürülmüştür.
-  * 120 günlük standart sezon boyunca **20.36 ton $\mathrm{CO}_2$ salımı engellenmiştir**.
-  * Enine metasentrik yükseklik ($GM = 1.021\text{ m}$, $\Delta KG = +9.4\text{ mm}$) hesaplanarak tekne form dengesi korunmuştur.
+* **Mühendislik Problemi:** Bodrum ahşap guletlerinde (20–35 m) koyda demirleme esnasında otel yüklerini beslemek amacıyla 24 saat kesintisiz çalışan yardımcı dizel alternatörler; yüksek yakıt tüketimi, akustik gürültü ve kıyı deniz kirliliğine yol açmaktadır.
+* **Teknik Yaklaşım:** Marin güneş PV, lityum batarya ve yardımcı dizel jeneratörden oluşan mikroşebeke modellenmiş; sonlu durum makinesi (FSM) tabanlı akıllı enerji yönetimi (EMS) tasarlanırken gemi enine stabilitesi doğrulanmıştır.
+* **Gerçekleme:**
+  * 48 VDC dağıtım barasında anlık Kirchhoff güç dengesini sağlayan ayrık zamanlı FSM geliştirilmiştir ($\Delta t = 5\text{ dk}$, denge toleransı $|P_{denge}| < 10^{-9}\text{ kW}$).
+  * Bodrum koordinatları ($37.034^\circ\text{ K}, 27.430^\circ\text{ D}$) için astronomik güneş izleme algoritması kurulmuş; **Model A (8.0 kWp Sabit Bimini)** ile **Model B (13.6 kWp Açılır Kapanır Güneş Kanatları)** rüzgar kilitleri altında karşılaştırılmıştır.
+* **Sonuçlar ve Doğrulama Durumu:**
+  * *Simülasyon Tahmini:* Günlük dizel tüketiminde **%71.6 yakıt tasarrufu** ($88.42\text{ L/gün}$'den $25.10\text{ L/gün}$'e düşüş) simüle edilmiştir.
+  * *İşletme Tahmini:* Jeneratör çalışma süresi günde 24.0 saatten 6.4 saate indirilerek günlük **17.6 saat sessiz seyir modu** öngörülmüştür.
+  * *Analitik Projeksiyon:* 120 günlük standart sezon boyunca **20.36 ton $\mathrm{CO}_2$ salımının engelleneceği** hesaplanmıştır.
+  * *Ön Hidrostatik Hesaplama:* Enine metasentrik yükseklik ($GM = 1.021\text{ m}$, $\Delta KG = +9.4\text{ mm}$) hesaplanarak tekne form dengesi kontrol edilmiştir.
 * 📂 **Depo:** [`rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator`](https://github.com/rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator)
 * 🚀 **Canlı Demo:** [3B WebGL Gulet EMS Simülatörü](https://rasittaflan.github.io/Bodrum-Gulet-Hybrid-EMS-Simulator/)
 
 ---
 
-<a id="arastirma-ve-deneyim"></a>
+<a id="deneyimler"></a>
 
 ## 3. Araştırma ve Mühendislik Deneyimleri
 
 ### ⚡ Vestel Ar-Ge — Donanım Tasarımı Stajyeri
 **Elektrikli Araç Şarj Sistemleri** • *2026 Yaz Dönemi (6 Haftalık Donanım Ar-Ge Stajı)*  
-* Yeni nesil elektrikli araç (EV) şarj istasyonlarının güç dönüştürücü mimarisi kapsamında **LLC Rezonans Dönüştürücü** ve Sıfır Gerilimde Anahtarlamalı (ZVS) **Faz Kaydırmalı Tam Köprü (PSFB)** topolojileri incelendi.
-* Üç fazlı **Vienna PFC** doğrultucu ve **interleaved boost** katlarının harmonik azaltımı ve güç faktörü düzeltimi analiz edildi.
-* Yüksek güçlü laboratuvar ortamında yarıiletken güç kayıp hesaplamaları, kondansatör dalgalanma akımı bütçesi, termal stres testleri ve CAN bus telemetri doğrulamaları gerçekleştirildi.
+* Elektrikli araç şarj istasyonlarının güç dönüştürücü mimarisi kapsamında **LLC Rezonans Dönüştürücü** ve Sıfır Gerilimde Anahtarlamalı (ZVS) **Faz Kaydırmalı Tam Köprü (PSFB)** topolojileri incelendi.
+* Üç fazlı **Vienna PFC** doğrultucu ve **interleaved boost** katlarının güç faktörü düzeltimi ve harmonik azaltımı analiz edildi.
+* Yüksek güçlü laboratuvar ortamında yarıiletken güç kayıp hesaplamaları, kondansatör dalgalanma akımı bütçesi, termal stres testleri ve CAN bus telemetri analizleri yürütüldü.
 
 ---
 
 ### 🧲 TÜBİTAK 2209-B — Lisans Araştırma Projesi
-**Elektromanyetik Levitasyon ve Hyperloop Sistemleri** • *2024 – Aktif*  
+**Elektromanyetik Levitasyon ve Kontrol** • *Karadeniz Teknik Üniversitesi*  
 * *Proje Başlığı:* "PID Kontrollü Elektromanyetik Levitasyon Sistemi Tasarımı ve Hyperloop Uygulamalarına Entegrasyonu".
-* 2D/3D magnetostatik sonlu elemanlar analizi, hava aralığı manyetik akı haritalaması ve bobin termal dağılım modellemesi yürütüldü.
-* Ansys Maxwell verilerini Simulink dinamik sistem modelleriyle birleştiren kapalı çevrim geri besleme algoritmaları geliştirildi.
+* 2D magnetostatik sonlu elemanlar analizi, hava aralığı akı hesaplamaları ve bobin termal dağılım modellemesi yürütüldü.
+* Ansys Maxwell simülasyon verilerini Simulink dinamik sistem modelleriyle birleştiren ayrık zamanlı kapalı çevrim geri besleme algoritmaları geliştirildi.
 
 ---
 
 ### 🏎️ Ege Üniversitesi Elektrikli Araç Takımı — Eski Takım Kaptanı
 **Elektrikli Yarış Aracı Mühendisliği** • *Ağustos 2023 – Eylül 2024*  
-* Verimlilik odaklı elektrikli yarış aracının tasarımı, bileşen entegrasyonu, kablo demeti montajı ve pist testleri süreçlerinde mühendislik ekibine liderlik yapıldı.
-* Batarya Yönetim Sistemi (BMS) hücre izleme, yüksek gerilim güvenlik kilitleri, motor sürücü parametre ayarları ve CAN bus telemetri veri toplama sistemleri yönetildi.
+* Verimlilik odaklı elektrikli yarış aracının tasarımı, bileşen entegrasyonu, düşük gerilim kablo demeti montajı ve pist testleri süreçlerinde öğrenci mühendislik ekibine liderlik yapıldı.
+* Batarya Yönetim Sistemi (BMS) hücre izleme, yüksek gerilim güvenlik kilitleri, motor sürücü parametre ayarları ve CAN telemetri sistemleri yönetildi.
 * Teknik yarış regülasyonlarına ve elektriksel güvenlik standartlarına tam uyum sağlandı.
 
 ---
 
-### 🚝 Hyperloop Mühendislik Ekibi
-**Levitasyon, İtki ve Dinamik Alt Sistemleri** • *2024 – Aktif*  
-* Elektromanyetik levitasyon sargıları, doğrusal indüksiyon itki konseptleri, güç dağıtımı ve dinamik stabilite alt sistemlerinde donanım geliştirme çalışmalarına katkı sağlandı.
+### 🚝 Hyperloop Takımı Mühendislik Çalışmaları
+**Levitasyon ve Dinamik Alt Sistemleri**  
+* Elektromanyetik levitasyon aktüatörleri, doğrusal indüksiyon itki konseptleri, güç dağıtımı ve dinamik stabilite alt sistemlerinde donanım geliştirme çalışmalarına katkı sağlandı.
 
 ---
 
@@ -139,47 +131,31 @@ Aşağıda listelenen tüm projeler; kaynak kodları, simülasyon modelleri ve d
 
 ## 4. Teknik Yetkinlikler
 
-Aşağıdaki yetkinlikler; araştırma projelerinde, laboratuvar testlerinde ve mühendislik çalışmalarında doğrudan uygulanan araç ve yöntemleri yansıtmaktadır:
-
 | Yetkinlik Alanı | Temel Araçlar ve Çatılar | Pratik Mühendislik Uygulaması |
 | :--- | :--- | :--- |
-| **Güç Elektroniği** | DC-DC Dönüştürücüler, LLC Rezonans, PSFB (ZVS), Vienna PFC, Buck/Boost Topolojileri | Yüksek verimli dönüştürücü tasarımı, manyetik nüve/endüktör hesabı, yarıiletken gerilim/akım stres ve termal kayıp analizi. |
-| **Kontrol ve Simülasyon** | MATLAB, Simulink, Simscape, Durum Uzayı, Klasik Denetim | Doğrusal olmayan dinamik sistem modelleme, ayrık zamanlı PID + Anti-Windup denetimi, kapalı çevrim kararlılık testleri. |
-| **Elektromanyetizma & FEA** | Ansys Maxwell (2D/3D), FEMM 4.2 | Magnetostatik ve geçici rejim analizi, B-H manyetik doyumu, bobin endüktans hesabı, hava aralığı kaldırma kuvveti haritalama. |
-| **Gömülü Sistemler** | C, C++, ARM Cortex-M (STM32), STM32CubeIDE | Bare-metal ve HAL gömülü yazılım, donanımsal zamanlayıcı PWM üretimi, ADC örnekleme, kesme servis rutinleri, CAN, UART, SPI, I2C. |
+| **Güç Elektroniği** | DC-DC Dönüştürücüler, LLC Rezonans, PSFB (ZVS), Vienna PFC, Buck/Boost Topolojileri | Dönüştürücü tasarımı, manyetik nüve/endüktör hesabı, yarıiletken gerilim/akım stres ve termal kayıp analizi. |
+| **Kontrol ve Simülasyon** | MATLAB, Simulink, Simscape, Durum Uzayı, Klasik Denetim | Doğrusal olmayan dinamik sistem modelleme, ayrık zamanlı PID + Anti-Windup denetimi, kararlılık analizleri. |
+| **Elektromanyetizma & FEA** | Ansys Maxwell 2D, FEMM 4.2 | 2D magnetostatik alan analizi, B-H doyum modellemesi, bobin endüktans hesabı, hava aralığı kuvvet haritalama. |
+| **Gömülü Sistemler** | **Nuvoton M032KG** (ARM Cortex-M0), **STM32** (ARM Cortex-M), C, GCC, VS Code, Nu-Link, STM32CubeIDE | Bare-metal gömülü yazılım, donanımsal zamanlayıcı PWM üretimi, çok kanallı ADC örnekleme, UART iletişimi, CAN bus. |
 | **Mühendislik Yazılımları** | Python (NumPy / SciPy), JavaScript, HTML5 / MathML, LaTeX, Git, GitHub | Ayrık sayısal modelleme, etkileşimli hesaplama motorları, sürüm takibi, teknik dokümantasyon. |
-| **Laboratuvar Ekipmanları** | Dijital Hafızalı Osiloskop, Güç Analizörü, Elektronik Yük, LCR Metre | Güç katı dalga formu analizi, akım dalgalanması ölçümü, termal dayanım testleri ve tezgah doğrulaması. |
+| **Laboratuvar Ekipmanları** | Dijital Hafızalı Osiloskop, Güç Analizörü, Elektronik Yük, LCR Metre | Güç katı dalga formu analizi, akım dalgalanması ölçümü, termal testler ve tezgah doğrulaması. |
 
 ---
 
-<a id="egitim-ve-akademik-gecmis"></a>
+<a id="egitim"></a>
 
 ## 5. Eğitim ve Akademik Geçmiş
 
 * **Lisans Derecesi — Elektrik-Elektronik Mühendisliği**  
   **Karadeniz Teknik Üniversitesi (KTÜ)**, Trabzon, Türkiye  
-  *Beklenen Mezuniyet: 2026*  
+  *Durum:* 4. Sınıf Lisans Öğrencisi &nbsp;|&nbsp; *Beklenen Mezuniyet:* **2027**  
   *İlgili Dersler:* Güç Elektroniği, Kontrol Sistemleri, Elektromanyetik Alan Teorisi, Mikroişlemciler, Elektrik Makineleri, Sinyaller ve Sistemler.
-
----
-
-<a id="github-aktivitesi"></a>
-
-## 6. GitHub Mühendislik Aktivitesi
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=rasittaflan&show_icons=true&theme=tokyonight&hide_border=false&bg_color=0b1329&title_color=38bdf8&text_color=94a3b8&icon_color=00f2fe&border_color=1e293b" alt="Rasit Taflan GitHub Stats" height="155" />
-&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rasittaflan&layout=compact&theme=tokyonight&hide_border=false&bg_color=0b1329&title_color=38bdf8&text_color=94a3b8&border_color=1e293b" alt="Top Languages" height="155" />
-
-</div>
 
 ---
 
 <a id="iletisim"></a>
 
-## 7. İletişim & Profesyonel Bağlantılar
+## 6. İletişim & Profesyonel Bağlantılar
 
 <div align="center">
 
