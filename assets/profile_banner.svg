@@ -1,269 +1,168 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="100%">
   <defs>
-    <!-- Background Gradients -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#040711"/>
-      <stop offset="40%" stop-color="#080f1e"/>
-      <stop offset="80%" stop-color="#0d182e"/>
-      <stop offset="100%" stop-color="#091224"/>
+    <!-- Solid Technical Background -->
+    <linearGradient id="academicBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080d1a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
 
-    <radialGradient id="ambientGlow" cx="75%" cy="45%" r="60%">
-      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.14"/>
-      <stop offset="45%" stop-color="#0284c7" stop-opacity="0.08"/>
-      <stop offset="85%" stop-color="#1e1b4b" stop-opacity="0.03"/>
-      <stop offset="100%" stop-color="#040711" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Metallic & Neon Accent Gradients -->
-    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe"/>
-      <stop offset="50%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#6366f1"/>
-    </linearGradient>
-
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="70%" stop-color="#f1f5f9"/>
-      <stop offset="100%" stop-color="#93c5fd"/>
-    </linearGradient>
-
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#fbbf24"/>
-    </linearGradient>
-
-    <!-- Engineering Graph Paper Graticule -->
-    <pattern id="engGridSmall" width="15" height="15" patternUnits="userSpaceOnUse">
-      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#1e293b" stroke-width="0.4" stroke-opacity="0.35"/>
-    </pattern>
-    <pattern id="engGridMajor" width="60" height="60" patternUnits="userSpaceOnUse">
-      <rect width="60" height="60" fill="url(#engGridSmall)"/>
-      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#334155" stroke-width="0.8" stroke-opacity="0.45"/>
+    <!-- CAD Hatch Pattern for Magnetic Core Laminations -->
+    <pattern id="coreHatch" width="8" height="8" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#334155" stroke-width="1.2" stroke-opacity="0.7"/>
     </pattern>
 
-    <!-- Glow Filter for High-Energy Lines -->
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <!-- Clean Technical Drafting Grid -->
+    <pattern id="cadGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+
+    <!-- Arrowhead Marker for CAD Dimensions -->
+    <marker id="arrowCAD" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 8 5 L 0 8 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowCADBack" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 8 2 L 0 5 L 8 8 z" fill="#38bdf8"/>
+    </marker>
   </defs>
 
-  <!-- ==================== BASE BACKGROUND & GRIDS ==================== -->
-  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)"/>
-  <rect width="1200" height="360" rx="16" fill="url(#engGridMajor)"/>
-  <rect width="1200" height="360" rx="16" fill="url(#ambientGlow)"/>
+  <!-- Canvas Background & CAD Grid -->
+  <rect width="1200" height="280" rx="8" fill="url(#academicBg)"/>
+  <rect width="1200" height="280" rx="8" fill="url(#cadGrid)"/>
 
-  <!-- Top Cyan Neon Accent Rail -->
-  <rect x="0" y="0" width="1200" height="4" rx="2" fill="url(#cyanAccent)"/>
+  <!-- Subtle Top Engineering Accent Border -->
+  <line x1="0" y1="1" x2="1200" y2="1" stroke="#0284c7" stroke-width="2"/>
 
-  <!-- ==================== RIGHT SIDE: ADVANCED ENGINEERING HUD & FEA VISUALIZATION ==================== -->
-  
-  <!-- Polar Grid / Maxwell FEA Iso-Potential Radar (Background of right side) -->
-  <g transform="translate(940, 180)" opacity="0.32">
-    <circle cx="0" cy="0" r="140" fill="none" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="3,3"/>
-    <circle cx="0" cy="0" r="105" fill="none" stroke="#0284c7" stroke-width="0.8"/>
-    <circle cx="0" cy="0" r="70" fill="none" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="2,4"/>
-    <circle cx="0" cy="0" r="35" fill="none" stroke="#00f2fe" stroke-width="1"/>
-    <line x1="-155" y1="0" x2="155" y2="0" stroke="#475569" stroke-width="0.8"/>
-    <line x1="0" y1="-155" x2="0" y2="155" stroke="#475569" stroke-width="0.8"/>
-    <line x1="-110" y1="-110" x2="110" y2="110" stroke="#334155" stroke-width="0.6"/>
-    <line x1="-110" y1="110" x2="110" y2="-110" stroke="#334155" stroke-width="0.6"/>
-  </g>
-
-  <!-- FEA Finite Element Triangulation Mesh (Delaunay Representation) -->
-  <g stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.38" fill="none" transform="translate(730, 40)">
-    <polygon points="120,40 180,20 220,70" />
-    <polygon points="180,20 260,35 220,70" />
-    <polygon points="220,70 260,35 290,95" />
-    <polygon points="220,70 290,95 240,130" />
-    <polygon points="150,110 220,70 240,130" />
-    <polygon points="120,40 220,70 150,110" />
-    <polygon points="70,80 120,40 150,110" />
-    <polygon points="70,80 150,110 100,150" />
-    <polygon points="150,110 240,130 180,180" />
-    <polygon points="100,150 150,110 180,180" />
-    <!-- Mesh Nodes -->
-    <circle cx="220" cy="70" r="2.5" fill="#00f2fe" opacity="0.9"/>
-    <circle cx="260" cy="35" r="2" fill="#38bdf8" opacity="0.7"/>
-    <circle cx="290" cy="95" r="2.5" fill="#00f2fe" opacity="0.9"/>
-    <circle cx="240" cy="130" r="3" fill="#f59e0b" opacity="0.9"/>
-    <circle cx="150" cy="110" r="2.5" fill="#38bdf8" opacity="0.8"/>
-  </g>
-
-  <!-- High-Precision Multichannel Oscilloscope & Power Stage HUD -->
-  <g transform="translate(730, 75)">
-    <!-- Main Glassmorphic Display Frame -->
-    <rect x="0" y="0" width="430" height="235" rx="12" fill="#070d1d" fill-opacity="0.88" stroke="#1e293b" stroke-width="1.6"/>
+  <!-- ==================== LEFT SECTION: ACADEMIC & PROFESSIONAL IDENTITY ==================== -->
+  <g transform="translate(60, 42)">
     
-    <!-- HUD Header Bar -->
-    <path d="M 0 12 C 0 5.37 5.37 0 12 0 L 418 0 C 424.63 0 430 5.37 430 12 L 430 32 L 0 32 Z" fill="#0c1730"/>
-    <line x1="0" y1="32" x2="430" y2="32" stroke="#1e293b" stroke-width="1.2"/>
-    
-    <!-- Top System Live Telemetry Tickers -->
-    <circle cx="18" cy="16" r="3.5" fill="#00f2fe">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="30" y="20" fill="#93c5fd" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing="0.8">
-      LAB BENCH TELEMETRY // REAL-TIME DYNAMICS
-    </text>
-
-    <!-- Status Indicators on HUD Header -->
-    <rect x="330" y="7" width="85" height="18" rx="4" fill="#132342" stroke="#0284c7" stroke-width="0.8"/>
-    <text x="372" y="20" fill="#38bdf8" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" font-weight="700" text-anchor="middle">
-      CH1 + CH2 LIVE
-    </text>
-
-    <!-- Scope Graticule Area (Inner Screen) -->
-    <rect x="15" y="44" width="400" height="120" rx="6" fill="#040814" stroke="#1e293b" stroke-width="1"/>
-    
-    <!-- Time-base Graticule Dashes -->
-    <line x1="15" y1="104" x2="415" y2="104" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="4,4"/>
-    <line x1="215" y1="44" x2="215" y2="164" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="4,4"/>
-    <line x1="115" y1="44" x2="115" y2="164" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,6"/>
-    <line x1="315" y1="44" x2="315" y2="164" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,6"/>
-
-    <!-- Waveform CH1: High-Frequency ZVS Resonant Tank Voltage (Cyan, Smooth Sinusoidal / Tank Ringing) -->
-    <path d="M 20 120 C 40 50, 70 50, 90 120 C 110 190, 140 190, 160 120 C 180 50, 210 50, 230 120 C 250 190, 280 190, 300 120 C 320 50, 350 50, 370 120 C 390 190, 405 190, 410 150"
-          fill="none" stroke="#00f2fe" stroke-width="2.2" stroke-linecap="round" filter="url(#neonGlow)"/>
-
-    <!-- Waveform CH2: Inductor Current CCM Triangular Ramp (Amber / Gold, Power Stage Current) -->
-    <path d="M 20 145 L 60 75 L 90 145 L 130 75 L 160 145 L 200 75 L 230 145 L 270 75 L 300 145 L 340 75 L 370 145 L 410 75"
-          fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
-
-    <!-- Trigger Point Indicator -->
-    <polygon points="215,46 220,53 210,53" fill="#ef4444"/>
-    <text x="225" y="55" fill="#ef4444" font-family="'JetBrains Mono', Consolas, monospace" font-size="8.5" font-weight="bold">TRIG</text>
-
-    <!-- Real Numerical Engineering Readouts (Bottom Tray of HUD) -->
-    <g transform="translate(15, 174)">
-      <!-- Readout 1: Magnetic FEA Convergence -->
-      <rect x="0" y="0" width="125" height="48" rx="6" fill="#081329" stroke="#1e293b" stroke-width="1"/>
-      <text x="8" y="15" fill="#64748b" font-family="'JetBrains Mono', Consolas, monospace" font-size="8" font-weight="700">FEA B-FIELD PEAK</text>
-      <text x="8" y="32" fill="#38bdf8" font-family="'JetBrains Mono', Consolas, monospace" font-size="13" font-weight="bold">1.82 T</text>
-      <text x="8" y="43" fill="#10b981" font-family="'JetBrains Mono', Consolas, monospace" font-size="7.5" font-weight="600">CONVERGED &lt;0.1%</text>
-
-      <!-- Readout 2: Maglev Target Air Gap & Force -->
-      <rect x="135" y="0" width="130" height="48" rx="6" fill="#081329" stroke="#1e293b" stroke-width="1"/>
-      <text x="143" y="15" fill="#64748b" font-family="'JetBrains Mono', Consolas, monospace" font-size="8" font-weight="700">AIR GAP / FORCE</text>
-      <text x="143" y="32" fill="#00f2fe" font-family="'JetBrains Mono', Consolas, monospace" font-size="13" font-weight="bold">5.0 mm | 0.48 N</text>
-      <text x="143" y="43" fill="#93c5fd" font-family="'JetBrains Mono', Consolas, monospace" font-size="7.5" font-weight="600">@ 4.8A NOMINAL</text>
-
-      <!-- Readout 3: SMPS & Closed-Loop Dynamics -->
-      <rect x="275" y="0" width="125" height="48" rx="6" fill="#081329" stroke="#1e293b" stroke-width="1"/>
-      <text x="283" y="15" fill="#64748b" font-family="'JetBrains Mono', Consolas, monospace" font-size="8" font-weight="700">RESONANT TANK</text>
-      <text x="283" y="32" fill="#f59e0b" font-family="'JetBrains Mono', Consolas, monospace" font-size="13" font-weight="bold">100 kHz ZVS</text>
-      <text x="283" y="43" fill="#a78bfa" font-family="'JetBrains Mono', Consolas, monospace" font-size="7.5" font-weight="600">PID CLOSED-LOOP</text>
-    </g>
-  </g>
-
-  <!-- Multilayer PCB Copper Traces connecting HUD to Canvas Edge -->
-  <g stroke="#00f2fe" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.65" fill="none">
-    <path d="M 640 160 L 680 160 L 710 190 L 730 190"/>
-    <circle cx="640" cy="160" r="3.5" fill="#040814" stroke="#00f2fe" stroke-width="2"/>
-    <path d="M 660 210 L 690 210 L 715 235 L 730 235"/>
-    <circle cx="660" cy="210" r="3.5" fill="#040814" stroke="#00f2fe" stroke-width="2"/>
-  </g>
-  <g stroke="#f59e0b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" fill="none">
-    <path d="M 630 250 L 670 250 L 700 280 L 730 280"/>
-    <circle cx="630" cy="250" r="3" fill="#040814" stroke="#f59e0b" stroke-width="1.8"/>
-  </g>
-
-  <!-- ==================== LEFT SIDE: ENGINEER PROFILE & INSTITUTIONAL IDENTITY ==================== -->
-  <g transform="translate(60, 48)">
-    
-    <!-- Institutional Academic Tag -->
-    <g transform="translate(0, 8)">
-      <rect x="0" y="0" width="375" height="26" rx="6" fill="#0d1b38" stroke="#1e3a8a" stroke-width="1"/>
-      <circle cx="14" cy="13" r="4.5" fill="#00f2fe">
-        <animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/>
-      </circle>
-      <text x="26" y="17.5" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace" font-size="11" font-weight="800" letter-spacing="1">
-        KARADENİZ TECHNICAL UNIVERSITY • EEE
+    <!-- Institution Header with Technical Dot -->
+    <g transform="translate(0, 0)">
+      <circle cx="5" cy="5" r="4" fill="#0284c7"/>
+      <text x="18" y="9" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.5">
+        KARADENİZ TECHNICAL UNIVERSITY • DEPARTMENT OF EEE
       </text>
     </g>
 
-    <!-- Main Name -->
-    <text x="0" y="78" fill="url(#textGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="900" letter-spacing="0.2">
+    <!-- Engineer Name -->
+    <text x="0" y="52" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="0.3">
       Muhammet Raşit Taflan
     </text>
 
-    <!-- Professional Subtitle -->
-    <text x="0" y="112" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="500">
-      Electrical &amp; Electronics Engineer <tspan fill="#38bdf8">|</tspan> R&amp;D Hardware &amp; Multiphysics Simulation
+    <!-- Professional Status (Accurate Academic Title) -->
+    <text x="0" y="82" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15.5" font-weight="500">
+      Electrical &amp; Electronics Engineering Student
     </text>
 
-    <!-- Core Engineering Focus Pillars (Micro Badges) -->
-    <g transform="translate(0, 138)">
-      <!-- Pillar 1 -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="145" height="26" rx="5" fill="#0b1730" stroke="#0284c7" stroke-width="1"/>
-        <text x="72" y="17" fill="#bae6fd" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" text-anchor="middle">
-          ⚡ Power Electronics
-        </text>
-      </g>
-      <!-- Pillar 2 -->
-      <g transform="translate(155, 0)">
-        <rect x="0" y="0" width="125" height="26" rx="5" fill="#0b1730" stroke="#0284c7" stroke-width="1"/>
-        <text x="62" y="17" fill="#bae6fd" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" text-anchor="middle">
-          🧲 Maglev FEA
-        </text>
-      </g>
-      <!-- Pillar 3 -->
-      <g transform="translate(290, 0)">
-        <rect x="0" y="0" width="135" height="26" rx="5" fill="#0b1730" stroke="#0284c7" stroke-width="1"/>
-        <text x="67" y="17" fill="#bae6fd" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" text-anchor="middle">
-          🎯 Closed-Loop PID
-        </text>
-      </g>
-      <!-- Pillar 4 -->
-      <g transform="translate(435, 0)">
-        <rect x="0" y="0" width="155" height="26" rx="5" fill="#0b1730" stroke="#0284c7" stroke-width="1"/>
-        <text x="77" y="17" fill="#bae6fd" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" text-anchor="middle">
-          💻 STM32 &amp; CAN Bus
-        </text>
-      </g>
+    <!-- Thin Divider -->
+    <line x1="0" y1="102" x2="480" y2="102" stroke="#334155" stroke-width="1"/>
+
+    <!-- Core Engineering Focus Domains -->
+    <g transform="translate(0, 126)">
+      <text x="0" y="0" fill="#cbd5e1" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="12" font-weight="600">
+        Power Electronics <tspan fill="#475569">|</tspan> Embedded Systems <tspan fill="#475569">|</tspan> Control Systems <tspan fill="#475569">|</tspan> Engineering Simulation
+      </text>
     </g>
 
-    <!-- Key Verified R&D Credentials -->
-    <g transform="translate(0, 185)">
-      <!-- TÜBİTAK 2209-B -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="185" height="32" rx="7" fill="#0a192f" stroke="#00f2fe" stroke-width="1.3"/>
-        <circle cx="16" cy="16" r="4" fill="#00f2fe"/>
-        <text x="98" y="20" fill="#e0f2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
-          🔬 TÜBİTAK 2209-B Lead
-        </text>
-      </g>
+    <!-- Primary Engineering Engagements (Clean Text Format) -->
+    <g transform="translate(0, 162)">
+      <rect x="0" y="0" width="160" height="24" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="80" y="16" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">
+        TÜBİTAK 2209-B Researcher
+      </text>
 
-      <!-- Vestel R&D -->
-      <g transform="translate(198, 0)">
-        <rect x="0" y="0" width="195" height="32" rx="7" fill="#0a192f" stroke="#38bdf8" stroke-width="1.3"/>
-        <circle cx="16" cy="16" r="4" fill="#38bdf8"/>
-        <text x="103" y="20" fill="#e0f2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
-          ⚡ Vestel R&amp;D Intern ('26)
-        </text>
-      </g>
+      <rect x="170" y="0" width="165" height="24" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="252" y="16" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">
+        Vestel R&amp;D Intern ('26)
+      </text>
 
-      <!-- EV Captaincy -->
-      <g transform="translate(405, 0)">
-        <rect x="0" y="0" width="185" height="32" rx="7" fill="#0a192f" stroke="#f59e0b" stroke-width="1.3"/>
-        <circle cx="16" cy="16" r="4" fill="#f59e0b"/>
-        <text x="98" y="20" fill="#fef3c7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
-          🏎️ Ex-EV Team Captain
-        </text>
-      </g>
-    </g>
-
-    <!-- Lab & Research Methodology Signature Line -->
-    <g transform="translate(0, 240)">
-      <text x="0" y="0" fill="#64748b" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600">
-        // METHODOLOGY: <tspan fill="#38bdf8">Finite Element Analysis</tspan> ➔ <tspan fill="#00f2fe">Simulink Dynamics</tspan> ➔ <tspan fill="#f59e0b">Hardware Prototyping</tspan>
+      <rect x="345" y="0" width="160" height="24" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="425" y="16" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">
+        Former EV Team Captain
       </text>
     </g>
 
   </g>
+
+  <!-- ==================== RIGHT SECTION: CAD & FEA TECHNICAL SCHEMATIC ==================== -->
+  <g transform="translate(680, 24)">
+    
+    <!-- Drafting Frame -->
+    <rect x="0" y="0" width="460" height="232" rx="6" fill="#0b1329" stroke="#1e293b" stroke-width="1.2"/>
+    
+    <!-- Frame Header Bar -->
+    <path d="M 0 6 C 0 2.68 2.68 0 6 0 L 454 0 C 457.32 0 460 2.68 460 6 L 460 26 L 0 26 Z" fill="#0f1c38"/>
+    <line x1="0" y1="26" x2="460" y2="26" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Header Labels -->
+    <text x="14" y="17" fill="#38bdf8" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" letter-spacing="1">
+      FEA ELECTROMAGNETIC ACTUATOR // CAD SCHEMATIC
+    </text>
+    <text x="446" y="17" fill="#64748b" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" text-anchor="end">
+      KTÜ TÜBİTAK 2209-B
+    </text>
+
+    <!-- Drafting Area: Cross-Section of Cylindrical/U Actuator -->
+    <g transform="translate(60, 42)">
+      
+      <!-- Stator Magnetic Core (Cross-Hatched Silicon Steel) -->
+      <path d="M 40 10 L 140 10 L 140 35 L 115 35 L 115 75 L 65 75 L 65 35 L 40 35 Z" 
+            fill="url(#coreHatch)" stroke="#94a3b8" stroke-width="1.4"/>
+
+      <!-- Solenoid Copper Coil Cross-Sections (Left & Right of center leg) -->
+      <!-- Left Coil -->
+      <rect x="15" y="38" width="22" height="34" rx="2" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+      <line x1="26" y1="38" x2="26" y2="72" stroke="#f59e0b" stroke-width="0.8" stroke-dasharray="2,2"/>
+      <text x="26" y="58" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold" text-anchor="middle">N</text>
+
+      <!-- Right Coil -->
+      <rect x="143" y="38" width="22" height="34" rx="2" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+      <line x1="154" y1="38" x2="154" y2="72" stroke="#f59e0b" stroke-width="0.8" stroke-dasharray="2,2"/>
+      <text x="154" y="58" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold" text-anchor="middle">N</text>
+
+      <!-- Magnetic Target / Plunger (Armature Target) -->
+      <rect x="25" y="100" width="130" height="20" rx="2" fill="url(#coreHatch)" stroke="#94a3b8" stroke-width="1.4"/>
+      <text x="90" y="114" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">ARMATURE (STEEL 1008)</text>
+
+      <!-- Magnetic Flux Path Lines (Symmetric loops across air gap) -->
+      <path d="M 90 25 C 130 25, 130 90, 90 108" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,3" opacity="0.85"/>
+      <path d="M 90 25 C 50 25, 50 90, 90 108" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,3" opacity="0.85"/>
+
+      <!-- Dimension Lines: Air Gap (g = 5.0 mm) -->
+      <line x1="175" y1="75" x2="175" y2="100" stroke="#38bdf8" stroke-width="1" marker-end="url(#arrowCAD)" marker-start="url(#arrowCADBack)"/>
+      <line x1="165" y1="75" x2="185" y2="75" stroke="#475569" stroke-width="0.8"/>
+      <line x1="155" y1="100" x2="185" y2="100" stroke="#475569" stroke-width="0.8"/>
+      <text x="190" y="90" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold">g = 5.0 mm</text>
+
+      <!-- Dimension Line: Core Width -->
+      <line x1="40" y1="4" x2="140" y2="4" stroke="#64748b" stroke-width="0.8"/>
+      <line x1="40" y1="1" x2="40" y2="7" stroke="#64748b" stroke-width="0.8"/>
+      <line x1="140" y1="1" x2="140" y2="7" stroke="#64748b" stroke-width="0.8"/>
+      <text x="90" y="-1" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">2r = 10.0 mm</text>
+
+      <!-- Mathematical Model Annotation Box (Right/Bottom) -->
+      <g transform="translate(180, 20)">
+        <rect x="0" y="0" width="145" height="48" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+        <text x="10" y="16" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="8.5">GOVERNING EQUATION</text>
+        <text x="10" y="32" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">F = (μ₀·A·N²·I²) / 4g²</text>
+        <text x="10" y="42" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="7.5">NONLINEAR PLANT DYNAMICS</text>
+      </g>
+
+      <!-- Verified Measurement Chip -->
+      <g transform="translate(180, 76)">
+        <rect x="0" y="0" width="145" height="42" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+        <text x="10" y="15" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8">VERIFIED FEA RESULT (V1)</text>
+        <text x="10" y="31" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold">F_v1 = 0.4823 N</text>
+        <text x="92" y="31" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="8.5">@ 4.8 A</text>
+      </g>
+
+    </g>
+
+    <!-- Bottom Metadata Status Bar -->
+    <rect x="0" y="210" width="460" height="22" rx="0" fill="#070d1d"/>
+    <line x1="0" y1="210" x2="460" y2="210" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="14" y="224" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="8.5">
+      CORE: SILICON STEEL // B_SAT ≈ 1.8 T // ANSYS MAXWELL 2D/3D VERIFIED
+    </text>
+  </g>
+
 </svg>

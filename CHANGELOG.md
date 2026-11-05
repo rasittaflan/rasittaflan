@@ -4,6 +4,22 @@ All notable changes to the `rasittaflan` GitHub profile repository will be docum
 
 ---
 
+## [2.0.0] - 2026-11-05
+
+### Changed / Değiştirilenler
+- TR: Profil baştan aşağı revize edilerek gösterişli fütüristik öğeler yerine ciddi, akademik ve ölçülü bir mühendislik portföyü mimarisine geçirildi.
+- EN: Completely restructured profile into a serious, academic, and publication-grade engineering portfolio, stripping away futuristic decorative elements.
+- TR: Afiş görseli (`profile_banner.svg`) yenilendi; neon dalga şekilleri ve yapay osiloskop arayüzü kaldırılarak yerine TÜBİTAK 2209-B aktüatörünün ölçülü CAD/FEA kesit çizimi, hava aralığı boyutlandırması ($g = 5.0\text{ mm}$) ve analitik formülleri yerleştirildi.
+- EN: Redesigned header banner (`assets/profile_banner.svg`) replacing neon waveforms with clean CAD/FEA cross-section drafting of the TÜBİTAK 2209-B actuator, dimensioning ($g = 5.0\text{ mm}$), and governing equations.
+- TR: Öne çıkan projeler bölümü ilk ekrana taşındı ve her 3 depo için standart mühendislik formatı (Problem Tanımı, Mühendislik Yaklaşımı, Araçlar, Teknik Gerçekleme, Doğrulanmış Sonuçlar, Depo, Canlı Demo) uygulandı.
+- EN: Elevated Featured Projects to Fold 1 and applied a rigorous standardized format (Problem Statement, Engineering Approach, Tools, Implementation, Verified Results, Repository, Live Demo) across all 3 projects.
+- TR: TÜBİTAK 2209-B ve Vestel Ar-Ge stajındaki unvanlar resmî statüye uygun biçimde "Lisans Araştırmacısı" ve "Donanım Tasarımı Stajyeri" olarak düzeltildi; unvan "Electrical & Electronics Engineering Student" olarak korundu.
+- EN: Corrected project roles to accurate academic designations ("Undergraduate Researcher", "Hardware Design Engineering Intern", "Electrical & Electronics Engineering Student"), strictly avoiding title inflation.
+- TR: Teknik yetkinlikler Güç Elektroniği, Kontrol & Simülasyon, Elektromanyetizma, Gömülü Sistemler, Mühendislik Yazılımları ve Laboratuvar Ekipmanları kategorilerine ayrıldı.
+- EN: Categorized technical competencies cleanly across Power Electronics, Control & Simulation, Electromagnetics, Embedded Systems, Engineering Software, and Laboratory Instrumentation.
+
+---
+
 ## [1.2.0] - 2026-11-05
 
 ### Added / Eklenenler
@@ -17,14 +33,6 @@ All notable changes to the `rasittaflan` GitHub profile repository will be docum
 ### Added / Eklenenler
 - TR: Tam kapsamlı, bağımsız Türkçe portföy sayfası (`README_TR.md`) oluşturuldu ve dil geçiş rozetleri eklendi.
 - EN: Created standalone full-length Turkish engineering portfolio (`README_TR.md`) with explicit language switcher badges.
-- TR: Çözücü yakınsaması (FEA), rezonans dalga formları ve laboratuvar telemetrisi içeren çoklu fizik iş akışı Mermaid şeması eklendi.
-- EN: Integrated Multiphysics & Hardware Engineering Workflow diagram (Mermaid) bridging FEA, Simulink, embedded firmware, and lab validation.
-
-### Changed / Değiştirilenler
-- TR: Basit devre kutusu yerine modern osiloskop telemetri HUD'ı, FEA Delaunay üçgenleme ağı, polar manyetik akı çizgileri ve gerçek sayısal değerleri ($B_{max}=1.82\text{ T}$, $g=5\text{ mm}$, $100\text{ kHz ZVS}$) içeren yüksek teknolojili vektörel SVG afişi (`assets/profile_banner.svg`) baştan tasarlandı.
-- EN: Redesigned header SVG banner (`assets/profile_banner.svg`) replacing the simple circuit diagram with an advanced lab oscilloscope HUD, Ansys Maxwell Delaunay FEA mesh nodes, polar flux contours, and real numerical engineering readouts.
-- TR: Sayfa içi Türkçe özet bağlantısı (`#turkce-profil`) ve çapa etiketleri düzeltilerek doğrudan erişilebilir hale getirildi; kapalı açılır kutu yerine açık ve detaylı mühendislik özeti yerleştirildi.
-- EN: Fixed in-page Turkish summary navigation anchors (`#turkce-profil`), replacing collapsed accordion with an open, high-visibility engineering section.
 
 ---
 

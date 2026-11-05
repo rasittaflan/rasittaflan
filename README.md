@@ -1,28 +1,16 @@
 <div align="center">
 
-<img src="./assets/profile_banner.svg" alt="Muhammet Raşit Taflan — Electrical & Electronics Engineer" width="100%" />
+<img src="./assets/profile_banner.svg" alt="Muhammet Raşit Taflan — Engineering Portfolio Banner" width="100%" />
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Muhammet_Raşit_Taflan-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rasittaflan)
-[![GitHub](https://img.shields.io/badge/GitHub-rasittaflan-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rasittaflan)
-[![Institution](https://img.shields.io/badge/Institution-Karadeniz_Technical_University-0284c7?style=for-the-badge&logo=mortarboard&logoColor=white)](https://www.ktu.edu.tr/eee)
-[![Status](https://img.shields.io/badge/Focus-Power_Electronics_%7C_FEA_%7C_Embedded-00f2fe?style=for-the-badge)](#)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-rasittaflan-0077b5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rasittaflan)
+[![GitHub](https://img.shields.io/badge/GitHub-rasittaflan-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rasittaflan)
+[![Institution](https://img.shields.io/badge/KTÜ-Electrical_%26_Electronics_Engineering-0284c7?style=flat-square&logo=mortarboard&logoColor=white)](https://www.ktu.edu.tr/eee)
 
 <br/>
 
-### 🚀 Quick Project Access / Projelerime Doğrudan Geçiş
-[![Jump to Featured Projects](https://img.shields.io/badge/🚀_JUMP_TO-FEATURED_PROJECTS_(PROJELERİM)-ef4444?style=for-the-badge&logo=rocket&logoColor=white)](#featured-projects)
-[![Maglev FEA Suite](https://img.shields.io/badge/🧲_Project-Maglev_FEA_Suite-0284c7?style=for-the-badge&logo=ansys&logoColor=white)](#maglev-fea)
-[![Power Electronics](https://img.shields.io/badge/⚡_Project-Power_Electronics_SMPS-f59e0b?style=for-the-badge)](#power-electronics)
-[![Bodrum Gulet EMS](https://img.shields.io/badge/☀️_Project-Marine_Hybrid_EMS-10b981?style=for-the-badge)](#marine-ems)
-
-<br/>
-
-### 🌐 Language Selection / Dil Seçeneği
-[![English Full Profile](https://img.shields.io/badge/Language-English_Full_Portfolio-2563eb?style=for-the-badge&logo=readme&logoColor=white)](README.md)
-[![Türkçe Tam Profil](https://img.shields.io/badge/Dil-Türkçe_Tam_Portföy-00b4d8?style=for-the-badge&logo=readme&logoColor=white)](README_TR.md)
-[![Sayfa İçi Türkçe Özet](https://img.shields.io/badge/Hızlı_Atla-Sayfa_İçi_Türkçe_Özet-059669?style=for-the-badge&logo=target&logoColor=white)](#turkce-profil)
+**[English Portfolio](#about-me)** &nbsp;|&nbsp; **[Featured Projects](#featured-engineering-projects)** &nbsp;|&nbsp; **[Research & Experience](#research--engineering-experience)** &nbsp;|&nbsp; **[Türkçe Profil Özeti](#turkce-profil-ozeti)**
 
 </div>
 
@@ -30,249 +18,194 @@
 
 <a id="about-me"></a>
 
-## 📌 Executive Summary
+## 1. Professional Overview
 
-> **Muhammet Raşit Taflan** is a senior Electrical & Electronics Engineering undergraduate and R&D researcher at **Karadeniz Technical University (KTU)**.
-> 
-> His engineering domain bridges **numerical multiphysics modeling** (Ansys Maxwell 2D/3D FEA, MATLAB/Simulink) with **physical power stage hardware design**, **embedded firmware control**, and **laboratory characterization**.
-> 
-> Key technical specialties include **Switched-Mode Power Supply (SMPS) Topologies (LLC, PSFB, Vienna PFC)**, **Electromagnetic Finite Element Analysis (Maglev)**, **Closed-Loop PID Control**, and **Renewable Energy Management Systems (EMS)**.
+I am a senior **Electrical & Electronics Engineering student** at **Karadeniz Technical University (KTU)**.
 
----
+My engineering work focuses on solving physical engineering challenges through the integration of **numerical multiphysics modeling**, **power converter topologies**, and **closed-loop embedded control**. Rather than generic software development, my research and project activities center on:
 
-## 🧭 Multiphysics & Hardware Engineering Workflow
-
-```mermaid
-flowchart LR
-    subgraph S1["1. Physics & FEA Simulation"]
-        direction TB
-        A1["Ansys Maxwell 2D/3D & FEMM"] --> A2["B-H Saturation Analysis (B < 1.8 T)"]
-        A2 --> A3["Force vs. Air Gap (F_mag vs g vs I)"]
-    end
-
-    subgraph S2["2. Dynamic Modeling & Control"]
-        direction TB
-        B1["MATLAB / Simulink Plant"] --> B2["Closed-Loop PID + Anti-Windup"]
-        B2 --> B3["Thermal Runaway & Stability Verif."]
-    end
-
-    subgraph S3["3. Embedded Firmware & Gate Drive"]
-        direction TB
-        C1["STM32 (ARM Cortex-M) Firmware"] --> C2["High-Res Timer PWM & ADC Sense"]
-        C2 --> C3["CAN Bus Telemetry & Interlocks"]
-    end
-
-    subgraph S4["4. Power Hardware & Lab Bench"]
-        direction TB
-        D1["DC-DC Converters & Gate Drivers"] --> D2["Digital Oscilloscopes & Power Analyzers"]
-        D2 --> D3["Verified Physical Prototyping"]
-    end
-
-    S1 ==> S2 ==> S3 ==> S4
-```
+* **Power Electronics & Conversion:** High-efficiency DC-DC topologies (Buck, Boost, LLC Resonant, Phase-Shifted Full-Bridge ZVS, Vienna PFC), magnetic design, and power semiconductor stress/thermal characterization.
+* **Electromagnetic Simulation & FEA:** 2D/3D magnetostatic and transient finite element analysis using Ansys Maxwell and FEMM, focusing on flux density saturation ($B$-$H$ curves) and force-airgap-current dynamics.
+* **Closed-Loop Control Dynamics:** Non-linear plant modeling, discrete-time feedback control, and PID + Anti-Windup algorithms in MATLAB/Simulink.
+* **Embedded Hardware & Telemetry:** ARM Cortex-M (STM32) firmware development, hardware timer-triggered PWM, ADC sampling, and automotive CAN bus telemetry.
 
 ---
 
-<a id="experience"></a>
+<a id="featured-engineering-projects"></a>
 
-## 💼 Engineering Experience & Leadership
+## 2. Featured Engineering Projects
 
-### ⚡ Hardware R&D Engineering Intern — Electric Vehicle Charging Systems
-**Vestel R&D** • *Summer 2026 (6-Week Intensive Hardware R&D)*  
-* **Power Conversion Topologies:** Investigated high-efficiency isolated DC-DC converter stages including **LLC Resonant Converters** and **Phase-Shifted Full-Bridge (PSFB)** with Zero-Voltage Switching (ZVS), alongside three-phase **Vienna PFC** rectifiers and **interleaved boost** power factor stages.
-* **Hardware Bench Testing:** Participated in power semiconductor loss calculations, thermal stress validation, capacitor ripple current budgeting, and CAN bus telemetry diagnostics under laboratory conditions.
+All projects listed below are documented with full source code, simulation workbooks, and verifiable analytical results.
 
----
+### Project 1: Electromagnetic Levitation (Maglev) FEA & System Dynamics Suite
+> **TÜBİTAK 2209-B Industry-Oriented Undergraduate Research Project**  
+> *Karadeniz Technical University — Department of Electrical & Electronics Engineering*
 
-### 🏎️ Team Captain — Electric Race Vehicle Engineering
-**Ege University Electric Vehicle Team** • *August 2023 – September 2024*  
-* **Technical Direction:** Directed the multidisciplinary engineering team through full-cycle CAD design, component integration, low-voltage wiring harnesses, and track testing for energy-efficient competition electric vehicles.
-* **Electrical Powertrain & BMS:** Supervised high-voltage battery pack safety, Battery Management System (BMS) cell balancing, motor controller parameter tuning, and low-voltage emergency shutdown loops.
+<div align="center">
+  <img src="./assets/fea_magnetic_flux.png" alt="Ansys Maxwell 2D/3D Magnetic Flux Density Contour Plot" width="85%" />
+  <p><em>Figure 1: Verified Ansys Maxwell magnetostatic flux density (B-Field) contour across core and 5.0 mm air gap.</em></p>
+</div>
 
----
-
-### 🚝 Hyperloop Subsystem Engineering
-**Hyperloop R&D Team** • *2024 – Present (Active)*  
-* **Subsystem Focus:** Electromagnetic levitation actuators, linear induction propulsion concepts, power distribution units, and dynamic stabilization under transitional speeds.
-
----
-
-<a id="research"></a>
-
-## 🔬 Research & Academic Publications
-
-### 🧲 TÜBİTAK 2209-B — PID-Controlled Electromagnetic Levitation System for Hyperloop Applications
-> *Industry-Oriented Undergraduate Research Project Support Program (TÜBİTAK 2209-B)*  
-> **Role:** Project Lead / Magnetic FEA & Hardware Design • **Institution:** Karadeniz Technical University
-
-* **Electromagnetic Design & FEA:** Modeled cylindrical and U-core electromagnetic actuators in **Ansys Maxwell 2D Axisymmetric and 3D** environments. Executed adaptive mesh convergence studies and B-H non-linear core saturation analysis ($B_{sat} \approx 1.8\text{ T}$).
-* **Verified Numerical Findings:**
-  * **V1 Single Cylindrical Actuator ($r = 5\text{ mm}, L = 30\text{ mm}$):** Achieved **$0.4823\text{ N}$** lifting force at $4.8\text{ A}$ excitation current across a target **$5.0\text{ mm}$ working air gap** ($22.26\text{ mN}$ at $1.0\text{ A}$).
-  * **V2 Pod Array Target:** Research specification for a multi-actuator distributed pod suspension aiming for **$\ge 130\text{ N}$**.
-* **System Dynamics & Control:** Extracted non-linear force-current-distance look-up matrices into **MATLAB/Simulink**; designed a closed-loop **PID + Anti-Windup** position regulator verified under 300-second thermal endurance runs and external mechanical disturbance steps.
-* 🔗 **Repository:** [`rasittaflan/Electromagnetic-Levitation-FEA-Simulations`](https://github.com/rasittaflan/Electromagnetic-Levitation-FEA-Simulations)  
-* 🚀 **Interactive Studio:** [Launch 3D WebGL Maglev Digital Twin](https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/) | [Live Calculation Studio](https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/Maglev_Canli_Hesaplayici.html)
+* **Problem Statement:** Contactless magnetic suspension systems for high-speed ground transportation (Hyperloop) and precision industrial motion are inherently open-loop unstable according to Earnshaw's Theorem. The physical lifting force exhibits severe non-linearity, varying inversely with the square of the air gap ($F \propto 1/g^2$).
+* **Engineering Approach:** Developed an integrated workflow bridging finite element electromagnetic modeling in **Ansys Maxwell 2D Axisymmetric & 3D** with dynamic closed-loop control synthesis in **MATLAB/Simulink**.
+* **Tools & Technologies:** `Ansys Maxwell 2D/3D`, `FEMM 4.2`, `MATLAB / Simulink`, `Three.js / WebGL`, `HTML5 / JavaScript`.
+* **Technical Implementation:**
+  * Modeled cylindrical and U-core electromagnets using Silicon Steel / Steel 1008 material models with non-linear saturation limits ($B_{sat} \approx 1.8\text{ T}$).
+  * Executed adaptive mesh refinement until residual energy error converged below $0.1\%$.
+  * Generated a discrete 3D lookup matrix ($F_{mag}$ vs. $g$ vs. $I$) and coupled it to a non-linear plant in Simulink with discrete-time PID + Anti-Windup control and thermal runaway bounds.
+* **Verified Results:**
+  * **V1 Cylindrical Actuator ($r = 5\text{ mm}, L = 30\text{ mm}$):** Verified lifting force of **$0.4823\text{ N}$** at $4.8\text{ A}$ excitation current across the nominal **$5.0\text{ mm}$ working air gap** ($22.26\text{ mN}$ at $1.0\text{ A}$).
+  * **V2 Distributed Array Specification:** Research target defined at **$\ge 130\text{ N}$** for pod suspension integration.
+  * Verified position stability under 300-second thermal endurance runs and external mechanical step disturbances.
+* 📂 **Repository:** [`rasittaflan/Electromagnetic-Levitation-FEA-Simulations`](https://github.com/rasittaflan/Electromagnetic-Levitation-FEA-Simulations)
+* 🚀 **Interactive Demo:** [Launch 3D WebGL Maglev Digital Twin](https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/) | [Live Calculation Studio](https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/Maglev_Canli_Hesaplayici.html)
 
 ---
 
-### ☀️ Interdisciplinary Engineering Capstone — Bodrum Gulet Hybrid Power & Smart EMS Optimization
-> *KTÜ MHN 4001 Interdisciplinary Engineering Design*  
-> **Authors:** Muhammet Raşit Taflan & Muhammed Emin Kadirov • **Department:** KTÜ EEE
+### Project 2: Power Electronics — 16 SMPS Topologies Design & Live Formula Suite
+> **Interactive Engineering Calculation Engine based on Texas Instruments Standards (SLYU036A & SLYW038B)**
 
-* **Problem Formulation:** Traditional wooden Bodrum gulets (20–35 m) run continuous auxiliary diesel alternators 24 hours/day for hotel electrical loads, causing fuel waste, noise, soot, and marine emissions.
-* **Engineered Architecture:** Integrated marine solar arrays (comparing **Model A: 8.0 kWp Fixed Bimini** vs. **Model B: 13.6 kWp Retractable Solar Wings**), **40 kWh LiFePO4 battery storage** ($28\text{ kWh}$ usable), and a **20 kW / 25 kVA auxiliary diesel generator** with a 30% wet-stacking prevention threshold.
-* **Real-Time FSM Energy Management:** Built a discrete-time Finite State Machine (FSM) enforcing instantaneous Kirchhoff power balance across a 48 VDC bus ($\Delta t = 5\text{ min}$, $|P_{balance}| < 10^{-9}\text{ kW}$).
-* **Validated Impact:**
-  * **Fuel Savings:** Reduced daily consumption by **71.6%** (from $88.42\text{ L/day}$ down to $25.10\text{ L/day}$).
-  * **Silent Operation:** Enabled **17.6 hours of continuous zero-emission silent anchoring** daily.
-  * **Naval Stability:** Verified transverse metacentric height ($GM = 1.021\text{ m}$, $\Delta KG = +9.4\text{ mm}$), confirming hull form stability.
-* 🔗 **Repository:** [`rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator`](https://github.com/rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator)  
-* 🚀 **Interactive Simulation:** [Launch Live WebGL Gulet EMS Simulator](https://rasittaflan.github.io/Bodrum-Gulet-Hybrid-EMS-Simulator/)
-
----
-
-<a id="featured-projects"></a>
-<a id="projects"></a>
-
-## 🛠️ Featured Open-Source Engineering Suites
-
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <a id="maglev-fea"></a>
-      <h3 align="center">🧲 Maglev FEA Suite</h3>
-      <p align="center">
-        <a href="https://github.com/rasittaflan/Electromagnetic-Levitation-FEA-Simulations">
-          <img src="https://raw.githubusercontent.com/rasittaflan/Electromagnetic-Levitation-FEA-Simulations/main/assets/banner.svg" alt="Maglev FEA Suite" width="100%"/>
-        </a>
-      </p>
-      <p><strong>TÜBİTAK 2209-B Electromagnetic Levitation & Control Suite:</strong></p>
-      <ul>
-        <li>Ansys Maxwell 2D/3D magnetostatic models.</li>
-        <li>Mesh convergence & B-H saturation curves.</li>
-        <li>Simulink PID + anti-windup closed-loop control.</li>
-        <li>Interactive 3D Three.js digital twin.</li>
-      </ul>
-      <p>
-        <a href="https://github.com/rasittaflan/Electromagnetic-Levitation-FEA-Simulations">📂 <strong>GitHub Repository</strong></a><br/>
-        <a href="https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/">🚀 <strong>Launch 3D Studio</strong></a><br/>
-        <a href="https://rasittaflan.github.io/Electromagnetic-Levitation-FEA-Simulations/Maglev_Canli_Hesaplayici.html">⚡ <strong>Live Force Calculator</strong></a>
-      </p>
-      <p><code>Ansys Maxwell</code> <code>Simulink</code> <code>Three.js</code> <code>PID</code></p>
-    </td>
-    <td width="33%" valign="top">
-      <a id="power-electronics"></a>
-      <h3 align="center">⚡ Power Electronics Suite</h3>
-      <p align="center">
-        <a href="https://github.com/rasittaflan/Power_Electronics">
-          <img src="https://raw.githubusercontent.com/rasittaflan/Power_Electronics/main/assets/banner.svg" alt="Power Electronics Suite" width="100%"/>
-        </a>
-      </p>
-      <p><strong>16 SMPS Topologies Design & Live Formula Suite:</strong></p>
-      <ul>
-        <li>Based on Texas Instruments SLYU036A & SLYW038B.</li>
-        <li>16 converters (Buck, Boost, PSFB, LLC, Flyback, Forward).</li>
-        <li>400 live engineering equations cross-verified.</li>
-        <li>100% offline interactive studio + Excel/Calc engines.</li>
-      </ul>
-      <p>
-        <a href="https://github.com/rasittaflan/Power_Electronics">📂 <strong>GitHub Repository</strong></a><br/>
-        <a href="https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Canli_Hesaplayici.html">🚀 <strong>Launch Live Calculator</strong></a><br/>
-        <a href="https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html">📊 <strong>Launch LaTeX Table</strong></a>
-      </p>
-      <p><code>SMPS</code> <code>DC-DC Topologies</code> <code>MathML</code> <code>Calc</code></p>
-    </td>
-    <td width="33%" valign="top">
-      <a id="marine-ems"></a>
-      <h3 align="center">☀️ Marine Hybrid EMS</h3>
-      <p align="center">
-        <a href="https://github.com/rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator">
-          <img src="https://raw.githubusercontent.com/rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator/main/screenshots/simulation_dashboard_preview.svg" alt="Bodrum Gulet EMS" width="100%"/>
-        </a>
-      </p>
-      <p><strong>Bodrum Gulet Hybrid Renewable EMS Simulator:</strong></p>
-      <ul>
-        <li>Discrete FSM energy balance ($|P_{err}| < 10^{-9}\text{ kW}$).</li>
-        <li>13.6 kWp folding solar wings vs. 8.0 kWp bimini.</li>
-        <li>71.6% diesel fuel reduction verified.</li>
-        <li>Dynamic 3D ocean hydrodynamics & stability.</li>
-      </ul>
-      <p>
-        <a href="https://github.com/rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator">📂 <strong>GitHub Repository</strong></a><br/>
-        <a href="https://rasittaflan.github.io/Bodrum-Gulet-Hybrid-EMS-Simulator/">🚀 <strong>Launch Live Simulation</strong></a>
-      </p>
-      <p><code>Hybrid EMS</code> <code>FSM</code> <code>LiFePO4</code> <code>Hydrodynamics</code></p>
-    </td>
-  </tr>
-</table>
+* **Problem Statement:** Designing switch-mode DC-DC converters for industrial, automotive, and telecommunication systems requires evaluating multiple isolated and non-isolated topologies under strict semiconductor stress, duty cycle limits, and continuous/discontinuous conduction mode (CCM/DCM) boundaries.
+* **Engineering Approach:** Developed a fully cross-verified engineering calculation suite that mathematically couples master spreadsheet engines (`.xlsx` & `.ods`) with zero-dependency browser-based analytical engines.
+* **Tools & Technologies:** `Power Converter Modeling`, `TI SLYU036A & SLYW038B`, `JavaScript (ES6)`, `HTML5 / MathML`, `Microsoft Excel`, `LibreOffice Calc`, `LaTeX`.
+* **Technical Implementation:**
+  * Synthesized 16 fundamental SMPS DC-DC converters:
+    * *Non-Isolated:* Buck, Boost, Inverting Buck-Boost, SEPIC, Ćuk, Zeta.
+    * *Isolated:* Flyback, Two-Switch Flyback, Active Clamp Forward, Single-Switch Forward, Two-Switch Forward, Push-Pull, Weinberg, Half-Bridge, Full-Bridge, and Phase-Shifted Full-Bridge (PSFB - ZVS).
+  * Formulated an analytical pipeline linking 14 user design input parameters to 25 continuous output variables per converter.
+* **Verified Results:**
+  * Formulated and numerically cross-verified **400 active engineering equations** with 100% numerical parity between Excel/Calc models and web engines.
+  * Accurately calculates inductor current ripple ($\Delta I_L$), capacitor voltage ripple ($\Delta V_{out}$), semiconductor peak voltage/current stress, and Zero-Voltage Switching (ZVS) transition criteria.
+* 📂 **Repository:** [`rasittaflan/Power_Electronics`](https://github.com/rasittaflan/Power_Electronics)
+* 🚀 **Interactive Demo:** [Launch Live SMPS Calculator](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Canli_Hesaplayici.html) | [Interactive LaTeX Reference Table](https://raw.githack.com/rasittaflan/Power_Electronics/main/TI_16_Guc_Kaynagi_Topolojisi_Interaktif_Tablo.html)
 
 ---
 
-<a id="skills"></a>
+### Project 3: Bodrum Gulet Hybrid EMS — Renewable Power & Naval Stability Optimization
+> **KTÜ MHN 4001 Interdisciplinary Engineering Capstone Project**  
+> *Authors: Muhammet Raşit Taflan & Muhammed Emin Kadirov*
 
-## 🧰 Technical Skills & Engineering Toolchain
+* **Problem Statement:** Traditional wooden Bodrum charter gulets (20–35 m) continuously run auxiliary diesel alternator sets 24 hours/day to sustain hotel electrical loads during bay anchorage, leading to fuel inefficiency, acoustic disturbance, soot, and marine emissions.
+* **Engineering Approach:** Modeled and simulated a marine microgrid combining photovoltaic arrays, lithium energy storage, and auxiliary generation, governed by a rule-based discrete Energy Management System (EMS) while validating naval transverse intact stability.
+* **Tools & Technologies:** `Discrete Energy Management FSM`, `Solar Position Astronomy`, `LiFePO4 Storage Modeling`, `Naval Hydrostatics`, `Three.js / WebGL`, `JavaScript`.
+* **Technical Implementation:**
+  * Implemented a discrete-time Finite State Machine (FSM) enforcing instantaneous Kirchhoff power balance across a 48 VDC distribution bus ($\Delta t = 5\text{ min}$, $|P_{balance}| < 10^{-9}\text{ kW}$).
+  * Coupled an astronomical solar trajectory algorithm for Bodrum coordinates ($37.034^\circ\text{ N}, 27.430^\circ\text{ E}$) to compare **Model A (8.0 kWp Fixed Bimini Array)** against **Model B (13.6 kWp Retractable Solar Wings)** with 3500 N linear actuator thrust and wind-speed safety interlocks.
+* **Verified Results:**
+  * **71.6% diesel fuel reduction:** Daily consumption decreased from $88.42\text{ L/day}$ (baseline) to $25.10\text{ L/day}$ (Model B).
+  * **17.6 hours daily silent operation:** Generator runtime reduced from 24.0 h/day down to 6.4 h/day.
+  * **20.36 tons seasonal $\mathrm{CO}_2$ avoided** over a standard 120-day charter season.
+  * **Naval stability validated:** Transverse metacentric height ($GM = 1.021\text{ m}$, $\Delta KG = +9.4\text{ mm}$), confirming form stability compliance.
+* 📂 **Repository:** [`rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator`](https://github.com/rasittaflan/Bodrum-Gulet-Hybrid-EMS-Simulator)
+* 🚀 **Interactive Demo:** [Launch 3D WebGL Marine EMS Simulator](https://rasittaflan.github.io/Bodrum-Gulet-Hybrid-EMS-Simulator/)
 
-| Discipline / Domain | Tools & Technologies | Engineering Application |
+---
+
+<a id="research--engineering-experience"></a>
+
+## 3. Research & Engineering Experience
+
+### ⚡ Vestel R&D — Hardware Design Engineering Intern
+**Electric Vehicle Charging Systems** • *Summer 2026 (6-Week Intensive Hardware R&D)*  
+* Investigated power converter topologies for next-generation EV charging stations, focusing on high-efficiency isolated DC-DC stages including **LLC Resonant Converters** and Zero-Voltage Switching (ZVS) **Phase-Shifted Full-Bridge (PSFB)**.
+* Evaluated three-phase **Vienna PFC** rectifiers and **interleaved boost** input stages for harmonic reduction and power factor correction.
+* Participated in semiconductor loss calculations, capacitor ripple current budgeting, thermal stress validation, and CAN bus telemetry verification in high-power test laboratory environments.
+
+---
+
+### 🧲 TÜBİTAK 2209-B — Undergraduate Research Project
+**Electromagnetic Levitation & Hyperloop Systems** • *2024 – Present*  
+* *Project Title:* "Design of PID Controlled Electromagnetic Levitation System and Its Integration into Hyperloop Applications".
+* Conducted 2D/3D magnetostatic finite element analysis, air-gap flux mapping, and coil thermal dissipation modeling.
+* Synthesized closed-loop feedback algorithms coupling Maxwell FEA data with Simulink dynamic plant models.
+
+---
+
+### 🏎️ Ege University Electric Vehicle Team — Former Team Captain
+**Electric Race Vehicle Engineering** • *August 2023 – September 2024*  
+* Led the multidisciplinary engineering team through design, integration, wiring harness assembly, and track testing of an energy-efficient electric competition vehicle.
+* Oversaw Battery Management System (BMS) cell monitoring, high-voltage safety interlocks, motor controller parameter tuning, and CAN bus telemetry acquisition.
+* Ensured full compliance with technical race regulations and electrical safety standards.
+
+---
+
+### 🚝 Hyperloop Engineering Team
+**Levitation, Propulsion & Dynamics Subsystems** • *2024 – Present*  
+* Contributed to subsystem hardware engineering across electromagnetic levitation coils, linear induction propulsion concepts, power distribution, and dynamic stability.
+
+---
+
+<a id="technical-competencies"></a>
+
+## 4. Technical Competencies
+
+The competencies listed below reflect tools, methods, and technologies applied directly in research projects, laboratory work, and engineering coursework:
+
+| Competency Domain | Core Tools & Frameworks | Practical Engineering Application |
 | :--- | :--- | :--- |
-| **Simulation & FEA** | `Ansys Maxwell (2D/3D)`, `FEMM`, `MATLAB / Simulink`, `Simscape` | Electromagnetic actuator modeling, flux density saturation ($B$-$H$), closed-loop control dynamics, plant linearization. |
-| **Power Electronics** | `DC-DC Topologies`, `LLC Resonant`, `PSFB (ZVS)`, `Vienna PFC`, `Flyback/Forward` | High-efficiency converter calculation, inductor/transformer magnetics design, semiconductor stress & thermal evaluation. |
-| **Embedded & Firmware** | `STM32 (ARM Cortex-M)`, `STM32CubeIDE`, `C`, `C++` | Bare-metal & HAL firmware development, interrupt service routines, timer-triggered PWM, ADC sampling. |
-| **Communication & Protocols** | `CAN Bus`, `UART`, `SPI`, `I2C` | Automotive & industrial telemetry, sensor data acquisition, powertrain module communication. |
-| **Laboratory & Hardware Testing** | `Digital Storage Oscilloscopes`, `Power Analyzers`, `Electronic Loads`, `LCR Meters` | Real-time waveform debugging, voltage/current ripple measurement, thermal verification, bench testing. |
-| **Mathematical Modeling** | `MATLAB`, `Python (NumPy / SciPy)`, `Excel / Calc Formula Engines`, `LaTeX` | Discrete energy balance, non-linear lookup mapping, analytical converter equations, mathematical documentation. |
-| **Development & Workflow** | `Git`, `GitHub`, `VS Code`, `Three.js / WebGL`, `HTML5 / CSS / JS` | SCM version control, engineering documentation, interactive digital twin simulators. |
+| **Power Electronics** | DC-DC Converters, LLC Resonant, PSFB (ZVS), Vienna PFC, Buck/Boost Topologies | High-efficiency converter design, magnetic core/inductor design, semiconductor stress and thermal loss analysis. |
+| **Control & Simulation** | MATLAB, Simulink, Simscape, State-Space, Classical Control | Non-linear dynamic plant modeling, discrete-time PID + Anti-Windup control, closed-loop stability verification. |
+| **Electromagnetics & FEA** | Ansys Maxwell (2D/3D), FEMM 4.2 | Magnetostatic & transient field analysis, B-H saturation analysis, coil inductance calculation, air-gap force mapping. |
+| **Embedded Systems** | C, C++, ARM Cortex-M (STM32), STM32CubeIDE | Bare-metal & HAL firmware, timer-triggered PWM, ADC sampling, interrupt service routines, CAN, UART, SPI, I2C. |
+| **Engineering Software** | Python (NumPy / SciPy), JavaScript, HTML5 / MathML, LaTeX, Git, GitHub | Discrete numerical modeling, interactive calculation engines, version control, technical documentation. |
+| **Laboratory Instrumentation** | Digital Storage Oscilloscopes, Power Analyzers, Electronic Loads, LCR Meters | Power stage waveform debugging, current ripple measurement, thermal endurance testing, bench validation. |
 
 ---
 
-## 📊 GitHub Engineering Activity
+<a id="education--certifications"></a>
+
+## 5. Education & Academic Background
+
+* **Bachelor of Science in Electrical & Electronics Engineering**  
+  **Karadeniz Technical University (KTU)**, Trabzon, Türkiye  
+  *Expected Graduation: 2026*  
+  *Relevant Coursework:* Power Electronics, Control Systems, Electromagnetic Field Theory, Microprocessors, Electrical Machines, Signals & Systems.
+
+---
+
+<a id="github-activity"></a>
+
+## 6. GitHub Activity
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=rasittaflan&show_icons=true&theme=tokyonight&hide_border=false&bg_color=0b1329&title_color=38bdf8&text_color=94a3b8&icon_color=00f2fe&border_color=1e293b" alt="Rasit Taflan GitHub Stats" height="165" />
+<img src="https://github-readme-stats.vercel.app/api?username=rasittaflan&show_icons=true&theme=tokyonight&hide_border=false&bg_color=0b1329&title_color=38bdf8&text_color=94a3b8&icon_color=00f2fe&border_color=1e293b" alt="Rasit Taflan GitHub Stats" height="155" />
 &nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rasittaflan&layout=compact&theme=tokyonight&hide_border=false&bg_color=0b1329&title_color=38bdf8&text_color=94a3b8&border_color=1e293b" alt="Top Languages" height="165" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rasittaflan&layout=compact&theme=tokyonight&hide_border=false&bg_color=0b1329&title_color=38bdf8&text_color=94a3b8&border_color=1e293b" alt="Top Languages" height="155" />
 
 </div>
 
 ---
 
-<a id="turkce-profil"></a>
+<a id="turkce-profil-ozeti"></a>
 
-## 🇹🇷 Türkçe Mühendislik Özeti & Proje Kapsamı
+## 7. 🇹🇷 Türkçe Profil Özeti
 
 > [!NOTE]
-> Tam kapsamlı, bağımsız Türkçe portföy sayfasına ulaşmak için [**👉 Türkçe Tam Portföy Dokümanını (README_TR.md)**](README_TR.md) inceleyebilirsiniz.
+> Tam kapsamlı, bağımsız Türkçe portföy dokümanı için [**👉 README_TR.md**](README_TR.md) dosyasını inceleyebilirsiniz.
 
-### Hakkımda & Mühendislik Yaklaşımım
-**Muhammet Raşit Taflan**, Karadeniz Teknik Üniversitesi (KTÜ) Elektrik-Elektronik Mühendisliği 4. sınıf lisans öğrencisidir. Mühendislik odağı; teorik hesaplamaları ve sonlu elemanlar analizi (FEA) simülasyonlarını, gömülü sistemler ve güç elektroniği donanımlarıyla fiziksel olarak doğrulamaktır.
+### Genel Tanıtım & Mühendislik Yaklaşımı
+**Muhammet Raşit Taflan**, Karadeniz Teknik Üniversitesi (KTÜ) Elektrik-Elektronik Mühendisliği 4. sınıf lisans öğrencisidir.
 
-#### Başlıca Çalışma Alanları:
-* **Güç Elektroniği & Güç Dönüşümü:** DC-DC dönüştürücü topolojileri (Buck, Boost, Inverting Buck-Boost, SEPIC, Ćuk, Zeta, Flyback, Forward, Half-Bridge, Full-Bridge), yüksek verimli Faz Kaydırmalı Tam Köprü (**PSFB - ZVS**), **LLC Rezonans** dönüştürücüler ve üç fazlı **Vienna PFC** doğrultucular.
-* **Sonlu Elemanlar Analizi (FEA) ve Manyetik Simülasyon:** Ansys Maxwell 2D eksenel simetrik ve 3D magnetostatik analizler, FEMM modelleme, B-H eğrisi doyumu, hava aralığı manyetik akı yoğunluğu ve aktüatör kaldırma kuvveti haritalama.
-* **Gömülü Sistemler ve Kapalı Çevrim Kontrol:** STM32 (ARM Cortex-M) mimarisi üzerinde C/C++ ile bare-metal ve HAL sürücü geliştirme, zamanlayıcı tetiklemeli PWM, ADC örnekleme, kapalı çevrim **PID + Anti-Windup** konum/akım denetimi ve CAN haberleşmesi.
-* **Yenilenebilir Enerji ve Hibrit Sistemler:** Güneş PV, LiFePO4 batarya ve jeneratör hibrit sistemlerinin sonlu durum makinesi (FSM) tabanlı akıllı enerji yönetimi (EMS).
+Çalışmaları, salt yazılım geliştiriciliğinden ziyade **güç elektroniği**, **sonlu elemanlar analizi (FEA)**, **gömülü sistemler** ve **kapalı çevrim kontrol dinamikleri** alanlarında gerçek fiziksel mühendislik problemlerine yönelik tasarım, analiz, simülasyon ve Ar-Ge faaliyetlerine odaklanmaktadır.
 
----
+### Başlıca Uzmanlık Alanları
+* **Güç Elektroniği & Güç Dönüşümü:** 16 temel SMPS DC-DC dönüştürücü topolojisi (Buck, Boost, Flyback, Forward, Köprü topolojileri), yüksek verimli Faz Kaydırmalı Tam Köprü (**PSFB - ZVS**), **LLC Rezonans** dönüştürücüler, üç fazlı **Vienna PFC** doğrultucular ve manyetik bileşen tasarımı.
+* **Sonlu Elemanlar Analizi (FEA) & Manyetik Simülasyon:** Ansys Maxwell 2D/3D ve FEMM ortamlarında manyetik akı yoğunluğu, B-H eğrisi manyetik doyumu ($B_{sat} \approx 1.8\text{ T}$), hava aralığı ve aktüatör kuvveti analizi.
+* **Gömülü Sistemler & Kontrol:** STM32 (ARM Cortex-M) mimarisi üzerinde C/C++ gömülü yazılım, donanımsal PWM üretimi, ADC örnekleme, kapalı çevrim **PID + Anti-Windup** denetleyiciler ve CAN bus haberleşmesi.
+* **Yenilenebilir Hibrit Enerji Sistemleri:** Güneş PV, LiFePO4 batarya ve yardımcı dizel jeneratör tabanlı sistemlerin sonlu durum makinesi (FSM) tabanlı akıllı enerji yönetimi (EMS).
 
-### Mühendislik Deneyimleri & Akademik Çalışmalar
-
-1. **Vestel Ar-Ge (2026 Yaz Stajı — Donanım Tasarımı):**
-   * Elektrikli araç şarj istasyonlarının güç dönüştürücü donanım mimarisi üzerine 6 haftalık yoğun Ar-Ge stajı.
-   * LLC rezonans, PSFB, Vienna PFC ve interleaved boost topolojilerinin yarıiletken gerilim/akım stres analizleri, termal testler ve CAN haberleşme testleri.
-2. **Ege Üniversitesi Elektrikli Araç Takımı (Ağustos 2023 – Eylül 2024 — Takım Kaptanı):**
-   * Verimlilik odaklı elektrikli yarış aracının elektriksel güç aktarım mimarisi, batarya yönetim sistemi (BMS), telemetri ve yarış regülasyonlarına uyum süreçlerinin yönetimi.
-3. **Hyperloop Takım Çalışmaları (2024 – Aktif):**
-   * Elektromanyetik levitasyon sargıları, doğrusal itki dinamikleri ve araç stabilite sistemleri üzerine elektronik donanım geliştirme.
-4. **TÜBİTAK 2209-B Üniversite-Sanayi İş Birlikli Araştırma Projesi (Proje Yürütücüsü):**
-   * *"PID Kontrollü Elektromanyetik Levitasyon Sistemi Tasarımı ve Hyperloop Uygulamalarına Entegrasyonu"*.
-   * Ansys Maxwell 2D/3D analizleri ile 5 mm hava aralığında $0.4823\text{ N}$ @ $4.8\text{ A}$ V1 tekil silindirik aktüatör kuvvet doğrulaması. Dağıtık çoklu aktüatör V2 pod hedefi $\ge 130\text{ N}$. Simulink kapalı çevrim PID denetleyici tasarımı.
-5. **Disiplinlerarası Mühendislik Tasarımı (KTÜ MHN 4001):**
-   * *"Bodrum Guletlerinde Yenilenebilir Enerji Destekli Hibrit Güç ve Akıllı Enerji Yönetim Sistemi Optimizasyonu"*.
-   * 48 VDC bara üzerinde Kirchhoff güç dengesini sağlayan FSM tabanlı akıllı EMS; %71.6 yakıt tasarrufu, günlük 17.6 saat sessiz seyir modu ve $GM = 1.021\text{ m}$ stabilite doğrulaması.
+### Öne Çıkan Deneyimler
+1. **Vestel Ar-Ge — Donanım Tasarımı Stajı (2026):** Elektrikli araç şarj sistemlerinin güç dönüştürücü donanım tasarımı, LLC rezonans ve PSFB topolojileri, termal stres testleri ve laboratuvar ölçümleri.
+2. **TÜBİTAK 2209-B Araştırma Projesi:** *"PID Kontrollü Elektromanyetik Levitasyon Sistemi Tasarımı ve Hyperloop Uygulamalarına Entegrasyonu"*. Ansys Maxwell FEA modellemesi ile 5 mm hava aralığında $0.4823\text{ N}$ @ $4.8\text{ A}$ V1 kuvvet doğrulaması ve Simulink kontrol tasarımı.
+3. **Ege Üniversitesi Elektrikli Araç Takımı — Eski Takım Kaptanı (2023–2024):** Elektrikli yarış aracının batarya yönetim sistemi, telemetri, düşük gerilim mimarisi ve teknik yarış regülasyonları yönetimi.
+4. **Disiplinlerarası Mühendislik Tasarımı (KTÜ MHN 4001):** *"Bodrum Guletlerinde Yenilenebilir Hibrit Güç ve Akıllı EMS Optimizasyonu"*. %71.6 yakıt tasarrufu, 17.6 saat sessiz seyir modu ve enine stabilite doğrulaması.
 
 ---
 
-## 📬 Connect With Me / İletişim
+<a id="contact--linkedin"></a>
+
+## 8. Contact & Professional Links
 
 <div align="center">
 
@@ -283,7 +216,7 @@ flowchart LR
 
 ```
 Muhammet Raşit Taflan
-Department of Electrical and Electronics Engineering
+Department of Electrical & Electronics Engineering
 Karadeniz Technical University (KTU) | Trabzon, Türkiye
 LinkedIn: https://www.linkedin.com/in/rasittaflan
 GitHub:   https://github.com/rasittaflan
@@ -291,6 +224,6 @@ GitHub:   https://github.com/rasittaflan
 
 ---
 
-*Engineered with precision, rigorous physics simulation, and dedication to R&D excellence ⚡*
+*Disciplined engineering analysis, physical simulation, and research-driven hardware design ⚡*
 
 </div>
