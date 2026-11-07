@@ -4,6 +4,14 @@ All notable changes to the `rasittaflan` GitHub profile repository will be docum
 
 ---
 
+## [4.1.0] - 2026-11-07
+
+### Added / Eklenenler
+- TR: "Öne Çıkan Mühendislik Projeleri" bölümüne **Proje 4: Sinyaller ve Sistemler İnteraktif Mühendislik Simülasyonu ve Öğretici Dijital Laboratuvar (KTÜ ELK3015)** eklendi (`README.md` ve `README_TR.md`). Projenin hem analitik mühendislik hesaplama/simülasyon motoru (6 canlı grafik simülatörü) hem de 8 aşamalı öğretici dershane ve 3 kademeli sınav hazırlık mimarisi belgelendi.
+- EN: Added **Project 4: Signals & Systems Interactive Engineering Simulation & Active Learning Laboratory (KTÜ ELK3015)** to Section 2 ("Featured Engineering Projects") in both `README.md` and `README_TR.md`, documenting both its analytical simulation engine (6 real-time graphical simulators) and its 8-stage interactive tutorial / 3-tier exam preparation architecture.
+
+---
+
 ## [4.0.0] - 2026-11-05
 
 ### Security & Confidentiality / Gizlilik ve Güvenlik

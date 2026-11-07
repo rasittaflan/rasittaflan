@@ -98,6 +98,23 @@ Aşağıda sunulan tüm projeler; doğrulanabilir hesaplama motorları, tekrarla
 
 ---
 
+### Proje 4: Sinyaller ve Sistemler İnteraktif Mühendislik Simülasyonu ve Öğretici Dijital Laboratuvar
+> **KTÜ ELK3015 Sinyaller ve Sistemler — Analitik Simülasyon Motoru ve 8 Aşamalı Öğretici Dershane Platformu**  
+> *Proje Sahibi ve Geliştirici: Muhammet Raşit Taflan — Karadeniz Teknik Üniversitesi (KTÜ)*
+
+* **Mühendislik ve Eğitim Problemi:** Zaman ve frekans tanım bölgesindeki soyut matematiksel operatörler (konvolüsyon integrali/toplamı, Fourier serisi yakınsaması, Laplace $s$-düzlemi kutup-sıfır ve yakınsama bölgesi geometrisi) ile fiziksel mühendislik sezgisi arasındaki kopukluğun giderilmesi; gerçek zamanlı sayısal simülasyon ile yapılandırılmış aktif öğrenme pedagojisinin birleştirilmesini gerektirmektedir.
+* **Teknik ve Pedagojik Yaklaşım:** KTÜ ELK3015 Sinyaller ve Sistemler dersinin 14 haftalık müfredatını (4 ana modül, 11 analitik konu) kapsayan, istemci taraflı sayısal hesaplama motoru ile 8 aşamalı öğretici dershane mimarisini tek çatı altında birleştiren interaktif bir mühendislik ve eğitim yazılımı geliştirilmiştir.
+* **Gerçekleme:**
+  * **6 Gerçek Zamanlı Matematiksel Simülatör (`Chart.js` + Özel Stem Çizim Motoru + `KaTeX`):** Sürekli zaman eksen dönüşümü $y(t)=x(at-b)$, çift/tek sinyal ayrıştırma $x_e(t)+x_o(t)$, ayrık zamanlı hareketli ortalama filtre $y[n]=\frac{1}{M}\sum_{k=0}^{M-1}x[n-k]$, adım adım ayrık konvolüsyon motoru $y[n]=\sum x[k]h[n-k]$ (*Ters Çevir, Kaydır, Çarp, Topla*), Fourier serisi Gibbs fenomeni harmonik sentezleyici ($N \in [1, 49]$) ve Laplace $s$-düzlemi Yakınsama Bölgesi (ROC) & BIBO kararlılık analizörü.
+  * **8 Aşamalı Öğretici Dershane Döngüsü:** Her konu başlığı öğrenciyi *1. Sezgisel ve Fiziksel Anlam $\rightarrow$ 2. Matematiksel Model $\rightarrow$ 3. Geometrik Yorum $\rightarrow$ 4. Adım Adım Çözümlü Örnek $\rightarrow$ 5. Canlı Simülasyon Deneyi $\rightarrow$ 6. Kavram Kontrolü $\rightarrow$ 7. Sınav Tuzağı Uyarısı $\rightarrow$ 8. Mini Değerlendirme Testi* adımlarından geçirir.
+  * **3 Kademeli Çıkmış Sınav Soruları Merkezi:** Vize ve final sınavlarına yönelik 8 kapsamlı problemi kademeli öğrenme desteğiyle (*İpucu Modu* $\rightarrow$ *Adım Adım Çözüm* $\rightarrow$ *Tam Sınav Kağıdı Çözümü*) sunar ve %100 çevrimdışı (internetsiz) çalışabilen yerel kütüphane paketini içerir.
+* **Sonuçlar ve Doğrulama Durumu:**
+  * *Sayısal ve Yapısal Doğrulama:* Çift/tek bileşen geri çatma hatasını ($< 10^{-15}$), ayrık konvolüsyon toplamını, Gibbs aşımını (~%9) ve $s$-düzlemi BIBO kararlılık kriterlerini ($	ext{Re}\{p_k\} < 0$) denetleyen **10/10 otomatik Python doğrulama testi** (`test_math_models.py` ve `test_data_integrity.py`) başarıyla geçmiştir.
+* 📂 **Depo:** [`rasittaflan/Signals-and-Systems-Interactive-Lab`](https://github.com/rasittaflan/Signals-and-Systems-Interactive-Lab)
+* 🚀 **Canlı Demo:** [Sinyaller ve Sistemler İnteraktif Simülasyon Laboratuvarı](https://rasittaflan.github.io/Signals-and-Systems-Interactive-Lab/)
+
+---
+
 <a id="3-arastirma-ve-muhendislik-deneyimleri"></a>
 
 ## 3. Araştırma ve Mühendislik Deneyimleri

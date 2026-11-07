@@ -98,6 +98,23 @@ All featured projects below include verifiable calculation engines, reproducible
 
 ---
 
+### Project 4: Signals & Systems Interactive Engineering Simulation & Active Learning Laboratory
+> **KTÜ ELK3015 Signals and Systems — Analytical Simulation Engine & 8-Stage Digital Tutorial Platform**  
+> *Author & Developer: Muhammet Raşit Taflan — Karadeniz Technical University (KTU)*
+
+* **Engineering & Educational Objective:** Bridging the gap between abstract time/frequency-domain mathematical operators (convolution integrals/sums, Fourier series convergence, Laplace $s$-plane pole-zero geometry) and physical engineering intuition requires coupling real-time numerical simulation with structured active-learning pedagogy.
+* **Technical & Pedagogical Approach:** Engineered a zero-dependency client-side computational laboratory and interactive self-paced tutorial system ("öğretici mühendislik dershanesi") covering the 14-week KTÜ ELK3015 curriculum across 4 core modules and 11 analytical topics.
+* **Implementation:**
+  * **6 Real-Time Mathematical Simulators (`Chart.js` + Custom Stem Canvas + `KaTeX`):** Continuous-time axis transformation synthesizer $y(t)=x(at-b)$, even/odd signal decomposition $x_e(t)+x_o(t)$, discrete moving-average filter $y[n]=\frac{1}{M}\sum_{k=0}^{M-1}x[n-k]$, step-by-step discrete convolution engine $y[n]=\sum x[k]h[n-k]$ (*Flip, Shift, Multiply, Accumulate*), Fourier Series Gibbs phenomenon harmonic synthesizer ($N \in [1, 49]$), and Laplace $s$-plane Region of Convergence (ROC) & BIBO stability analyzer.
+  * **8-Stage Active Learning Tutorial Flow:** Every topic guides the student through *1. Physical Intuition $\rightarrow$ 2. Rigorous Mathematical Formulation $\rightarrow$ 3. Geometric Visual Interpretation $\rightarrow$ 4. Worked Analytical Example $\rightarrow$ 5. Live Parameter Sandbox $\rightarrow$ 6. Concept Check $\rightarrow$ 7. Exam Trap Alert $\rightarrow$ 8. Self-Assessment Mini-Quiz*.
+  * **3-Mode Past Exam Solution Center:** Features 8 comprehensive midterm/final problems with progressive scaffolding (*Hint Mode* $\rightarrow$ *Step-by-Step Derivation* $\rightarrow$ *Full Exam-Sheet Proof*) and a 100% offline-capable local distribution.
+* **Results & Verification:**
+  * *Numerical & Structural Verification:* **10/10 automated Python unit tests** (`test_math_models.py` & `test_data_integrity.py`) verifying odd/even reconstruction error $< 10^{-15}$, discrete convolution sum parity, Gibbs overshoot (~9%), and $s$-plane BIBO stability rules ($	ext{Re}\{p_k\} < 0$).
+* 📂 **Repository:** [`rasittaflan/Signals-and-Systems-Interactive-Lab`](https://github.com/rasittaflan/Signals-and-Systems-Interactive-Lab)
+* 🚀 **Interactive Demo:** [Live Signals & Systems Interactive Lab](https://rasittaflan.github.io/Signals-and-Systems-Interactive-Lab/)
+
+---
+
 <a id="3-research--engineering-experience"></a>
 
 ## 3. Research & Engineering Experience
